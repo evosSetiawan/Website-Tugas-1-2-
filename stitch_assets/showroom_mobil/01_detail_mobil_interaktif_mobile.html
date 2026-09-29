@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "surface-dim": "#cbdbf5", "surface-container-highest": "#d3e4fe", "surface-bright": "#f8f9ff", "on-primary-fixed-variant": "#93000d", "on-secondary-fixed": "#131b2e", "on-secondary-container": "#5c647a", "on-error": "#ffffff", "secondary-fixed": "#dae2fd", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffd9dd", "tertiary-container": "#926a6f", "on-secondary-fixed-variant": "#3f465c", "background": "#f8f9ff", "surface-container-high": "#dce9ff", "on-primary": "#ffffff", "on-background": "#0b1c30", "on-primary-fixed": "#410002", "surface-tint": "#bb171c", "secondary": "#565e74", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#603d42", "secondary-container": "#dae2fd", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ebbabf", "on-surface": "#0b1c30", "secondary-fixed-dim": "#bec6e0", "primary-container": "#db322f", "surface": "#f8f9ff", "inverse-primary": "#ffb4ac", "inverse-on-surface": "#eaf1ff", "surface-container-low": "#eff4ff", "on-tertiary-container": "#fffbff", "tertiary": "#775256", "primary": "#b7131a", "error": "#ba1a1a", "outline-variant": "#e4beb9", "on-tertiary-fixed": "#2f1317", "on-surface-variant": "#5b403d", "surface-container": "#e5eeff", "on-primary-container": "#fffbff", "primary-fixed": "#ffdad6", "outline": "#906f6c", "primary-fixed-dim": "#ffb4ac", "inverse-surface": "#213145", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-3xl": "6rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-2xl": "4rem", "space-md": "1rem", "margin-desktop": "4rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-lg": "2rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-numeric": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero": ["4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.035em", "fontWeight": "800" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-numeric": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "label-caps": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.12em", "fontWeight": "700" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="pointer-events-none fixed inset-0 z-0 overflow-hidden"><div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[540px] h-[540px] rounded-full bg-primary/5 blur-[120px]"></div><div class="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-primary-container/5 blur-[100px]"></div></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 flex items-center justify-center text-on-surface rounded-lg hover:bg-surface-container-high/50 transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2"><img alt="A sleek, luxury automotive emblem logo for 'AURA MOTORS', modern minimalist geometric winged shield monogram with subtle ruby red and carbon metallic styling, vector aesthetic on transparent background.. Design context: - Primary color: #e53935
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WiCn4eNTjwV6GtDDCn6557CwPHMirboPP5VoKKSeFqYjY_8n0SlngUMq1XOXr1wSQBVhQHaI3v1k_yI3IUc8c97k2ED1U4yvM-IcI6pXwKUWBHCi8ojrPHEHnjbRv7FppG7uEDVx930_H5ldZ0cOzXNBpOZudfKKYVDjFhYSXzUoUiSHT7usE7zAQt97YA67yAz5yek3su6PKixc3VxVkkvgfc6PnPGDLzusa59WfXm1jVut2aWYvv-Zk"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary tracking-widest leading-none">AURA</span><span class="font-headline-sm text-label-md font-bold tracking-tight text-on-surface uppercase leading-tight">MOTORS</span></div></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-3 flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-[0_2px_10px_rgba(183,19,26,0.08)] hover:bg-primary hover:text-on-primary transition-all duration-200" data-path="profil-test-drive" href="#"><span class="material-symbols-outlined text-[18px]">speed</span><span class="font-label-caps text-label-caps hidden sm:inline-block">TEST DRIVE</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface z-10 min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Ambient Directional Red Luminescence -->
+<div class="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-primary/10 blur-[100px] z-0"></div>
+<!-- Content Container -->
+<div class="relative z-10 px-space-md pt-2 flex flex-col gap-space-md">
+<!-- Compact Breadcrumb & Status -->
+<div class="flex items-center justify-between gap-space-xs py-1">
+<div class="flex items-center gap-1.5 text-secondary truncate">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Katalog</span>
+<span class="text-outline-variant font-label-caps">/</span>
+<span class="font-label-caps text-label-caps text-primary font-bold uppercase truncate">Aura GT Crimson</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-label-caps text-[9px] uppercase tracking-wider">GENESIS V.02</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-lowest shadow-sm px-2.5 py-1 rounded-full shrink-0">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-caps text-[10px] text-on-surface font-semibold tracking-wider uppercase">Siap Konfigurasi</span>
+</div>
+</div>
+<!-- Title, Subtitle, and Primary Metrics Banner -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Pinnacle Hyper-Electric</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase font-extrabold leading-tight">
+          AURA GT CRIMSON
+        </h1>
+<p class="font-body-md text-body-md text-secondary leading-snug">
+          Inovasi Presisi Hyper-Tourer Listrik Rancang Bangun Digital
+        </p>
+</div>
+<!-- Quick Metrics Highlight Badges -->
+<div class="flex items-center gap-2 pt-1">
+<div class="flex-1 flex items-center justify-between bg-surface-container-lowest shadow-sm rounded-xl px-3.5 py-2.5">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">0 - 100 KM/H</span>
+<span class="font-label-numeric text-label-numeric text-primary font-bold tracking-tight">2.4<span class="font-body-sm text-body-sm text-secondary ml-0.5 font-normal">detik</span></span>
+</div>
+<span class="material-symbols-outlined text-primary/40 text-[26px]">timer</span>
+</div>
+<div class="flex-1 flex items-center justify-between bg-surface-container-lowest shadow-sm rounded-xl px-3.5 py-2.5">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Total Output</span>
+<span class="font-label-numeric text-label-numeric text-on-surface font-bold tracking-tight">850<span class="font-body-sm text-body-sm text-secondary ml-0.5 font-normal">HP</span></span>
+</div>
+<span class="material-symbols-outlined text-secondary/40 text-[26px]">bolt</span>
+</div>
+</div>
+</div>
+<!-- Mode Selector: Eksterior 360 vs Kokpit Digital -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-xl shadow-inner gap-1">
+<button class="flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all duration-200" id="btn-exterior-view">
+<span class="material-symbols-outlined text-[18px]">360</span>
+<span>Eksterior 360°</span>
+</button>
+<button class="flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg text-secondary hover:text-on-surface font-label-md text-label-md transition-all duration-200" id="btn-cockpit-view">
+<span class="material-symbols-outlined text-[18px]">airline_seat_recline_extra</span>
+<span>Kokpit Digital</span>
+</button>
+</div>
+<!-- Interactive Car Stage Container -->
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-lowest shadow-md flex flex-col">
+<!-- Glow ambient background inside canvas stage -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-surface-container-low/40 pointer-events-none"></div>
+<!-- Main Showcase Car Image Stage with Hotspots -->
+<div class="relative w-full aspect-[16/10] overflow-hidden select-none" id="stage-viewport">
+<img alt="Aura GT Crimson Interactive Stage" class="w-full h-full object-cover object-center transition-all duration-500 ease-out" id="car-stage-image" src="https://lh3.googleusercontent.com/aida/AEtjO1XX0Kt5EGYSimyGLfcXKjTP2YIEWYh9KE7LBT9oMhxn8Ly09Ag4tiAmtHFmQMMSlaJLtA7MUDY_lQAkG7snErwemm1iIlEvpYR-nBsle3iFMbUh7_fpTsl5b-s-QxrCcfytDwOPCqa-SCW3jbzYtNtZD2h4FGaN4LRPCk2xlGMkV647zdauCGcqJ75RR7XDaqpYe_cMoQugynC-9q_9Aj8ajooaIFiljeIcpbz1fpYOwd2xgUD71lf6h3o"/>
+<!-- Cockpit fallback layer (hidden initially) -->
+<div class="hidden absolute inset-0 w-full h-full" id="cockpit-layer">
+<img class="w-full h-full object-cover object-center" data-alt="Interior driver cockpit of a futuristic luxury electric hypercar Aura GT Crimson, ultra-minimalist steering yoke with integrated digital displays, head-up augmented reality windshield projection, Alcantara upholstery with crimson carbon fiber accents and ambient red light strip under dashboard, ultra-clean studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlSXVNLHEdAQyRQx0Ssz7L97IobbevQenBG4CjR5I_rGeVabtn5LqVI9ObRDWD923VSigldsS-ONCgPbiAm6rVDRqxXrJZGO136oHKSJ4tbnr49quy3s0m9_aNhUiG2wcBUq_-KJc8zcWm6lHF9VhYTDgdAFzwERPaMmBWzae93TBKHo4f7c_E8_hHziXMjO9Uamf7MZXa6Y-XwT3kB24AvMaqmCzCHk3H42LJgCQUAndK7M9d6b6B"/>
+</div>
+<!-- Hotspot Pin 1: Headlamp -->
+<button aria-label="Detail Headlamp Laser Matrix" class="hotspot-trigger absolute top-[52%] left-[38%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center group z-20 focus:outline-none" data-pin="headlamp">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-inverse-surface shadow-md flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</span>
+</button>
+<!-- Hotspot Pin 2: Velg/Roda -->
+<button aria-label="Detail Roda Forged Carbon" class="hotspot-trigger absolute top-[68%] left-[48%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center group z-20 focus:outline-none" data-pin="wheels">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-inverse-surface shadow-md flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</span>
+</button>
+<!-- Hotspot Pin 3: Powertrain / Kap -->
+<button aria-label="Detail Dual Motor 800V" class="hotspot-trigger absolute top-[56%] left-[29%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center group z-20 focus:outline-none" data-pin="motor">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-inverse-surface shadow-md flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</span>
+</button>
+<!-- Hotspot Pin 4: Kokpit AuraOS -->
+<button aria-label="Detail Kokpit AuraOS" class="hotspot-trigger absolute top-[44%] left-[58%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center group z-20 focus:outline-none" data-pin="cockpit">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-inverse-surface shadow-md flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</span>
+</button>
+<!-- Hotspot Pin 5: Active Aero Wing -->
+<button aria-label="Detail Active Downforce Wing" class="hotspot-trigger absolute top-[46%] left-[72%] -translate-x-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center group z-20 focus:outline-none" data-pin="wing">
+<span class="absolute w-8 h-8 rounded-full bg-primary/30 animate-ping"></span>
+<span class="relative w-5 h-5 rounded-full bg-inverse-surface shadow-md flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</span>
+</button>
+<!-- Hint badge on mobile -->
+<div class="absolute bottom-2.5 right-2.5 bg-inverse-surface/85 backdrop-blur-md text-surface px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md pointer-events-none">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">touch_app</span>
+<span class="font-label-caps text-[9px] uppercase tracking-wider text-surface">Tap Hotspot Pin</span>
+</div>
+</div>
+<!-- Responsive Dynamic Tooltip Display Card -->
+<div class="p-3.5 bg-surface-container-low transition-all duration-300" id="hotspot-info-card">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary text-[18px]" id="tooltip-icon">light_mode</span>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-wider" id="tooltip-tag">AERODINAMIKA &amp; PENCAHAYAAN</span>
+<h2 class="font-headline-sm text-label-md font-bold text-on-surface leading-tight" id="tooltip-title">LED Matrix Laser with Aura Beam</h2>
+</div>
+</div>
+<span class="shrink-0 px-2 py-0.5 rounded bg-surface-container-lowest text-secondary font-label-caps text-[9px] uppercase" id="tooltip-status">RPL Firmware v2.1</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1.5 leading-relaxed" id="tooltip-desc">
+          Proyektor adaptif cerdas yang dikendalikan oleh mikro-modul buatan tim RPL. Mengarahkan sorot cahaya secara otonom saat menikung dengan jangkauan 650 meter tanpa menyilaukan pengemudi lain.
+        </p>
+</div>
+</div>
+<!-- Quick Specs Bar (4-Column Bento Metric Matrix) -->
+<div class="grid grid-cols-4 gap-2">
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<span class="material-symbols-outlined text-[20px] text-primary mb-0.5">ev_station</span>
+<span class="font-label-numeric text-[1.125rem] font-bold text-on-surface leading-none">620</span>
+<span class="font-label-caps text-[9px] text-secondary tracking-tight uppercase mt-1">KM Jelajah</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<span class="material-symbols-outlined text-[20px] text-primary mb-0.5">sync_alt</span>
+<span class="font-label-numeric text-[1.125rem] font-bold text-on-surface leading-none">1.050</span>
+<span class="font-label-caps text-[9px] text-secondary tracking-tight uppercase mt-1">Nm Torsi</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<span class="material-symbols-outlined text-[20px] text-primary mb-0.5">speed</span>
+<span class="font-label-numeric text-[1.125rem] font-bold text-on-surface leading-none">325</span>
+<span class="font-label-caps text-[9px] text-secondary tracking-tight uppercase mt-1">KM/H Maks</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<span class="material-symbols-outlined text-[20px] text-primary mb-0.5">flash_on</span>
+<span class="font-label-numeric text-[1.125rem] font-bold text-on-surface leading-none">800V</span>
+<span class="font-label-caps text-[9px] text-secondary tracking-tight uppercase mt-1">Ultra Cas</span>
+</div>
+</div>
+<!-- Exterior Color Customization -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Kustomisasi Cat Eksterior</span>
+<p class="font-headline-sm text-label-md font-bold text-on-surface" id="active-color-name">Ruby Red Metallic Flake</p>
+</div>
+<span class="material-symbols-outlined text-primary text-[22px]">palette</span>
+</div>
+<!-- Color Swatches Row -->
+<div class="flex items-center justify-around gap-2 pt-1" id="swatch-container">
+<!-- Ruby Red (Active) -->
+<button class="color-swatch-btn group relative flex flex-col items-center gap-1.5 focus:outline-none" data-color="Ruby Red Metallic Flake" data-filter="none">
+<div class="w-11 h-11 rounded-full p-0.5 bg-primary flex items-center justify-center transition-all duration-200 shadow-md">
+<span class="w-full h-full rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[16px]">check</span>
+</span>
+</div>
+<span class="font-label-caps text-[9px] text-primary font-bold uppercase">Ruby Red</span>
+</button>
+<!-- Polar White -->
+<button class="color-swatch-btn group relative flex flex-col items-center gap-1.5 focus:outline-none" data-color="Polar Arctic Pure White" data-filter="hue-rotate(180deg) saturate(20%) brightness(140%)">
+<div class="w-11 h-11 rounded-full p-0.5 bg-surface-container-high flex items-center justify-center transition-all duration-200">
+<span class="w-full h-full rounded-full bg-slate-100 flex items-center justify-center shadow-inner"></span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary uppercase font-medium">Polar White</span>
+</button>
+<!-- Cyber Slate -->
+<button class="color-swatch-btn group relative flex flex-col items-center gap-1.5 focus:outline-none" data-color="Cyber Slate Metallic Matte" data-filter="grayscale(90%) brightness(75%)">
+<div class="w-11 h-11 rounded-full p-0.5 bg-surface-container-high flex items-center justify-center transition-all duration-200">
+<span class="w-full h-full rounded-full bg-slate-600 flex items-center justify-center shadow-inner"></span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary uppercase font-medium">Cyber Slate</span>
+</button>
+<!-- Obsidian Black -->
+<button class="color-swatch-btn group relative flex flex-col items-center gap-1.5 focus:outline-none" data-color="Obsidian Deep Black Pearl" data-filter="grayscale(100%) brightness(35%) contrast(140%)">
+<div class="w-11 h-11 rounded-full p-0.5 bg-surface-container-high flex items-center justify-center transition-all duration-200">
+<span class="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center shadow-inner"></span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary uppercase font-medium">Obsidian</span>
+</button>
+</div>
+</div>
+<!-- Drive Mode Selector Chips -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Profil Dinamika Berkendara</span>
+<span class="font-label-caps text-[10px] text-primary font-bold">ECU KONTROL RPL</span>
+</div>
+<div class="grid grid-cols-3 gap-2" id="drive-mode-group">
+<button class="drive-mode-btn h-11 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center gap-1.5 font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+<span>Comfort</span>
+</button>
+<button class="drive-mode-btn h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-1.5 font-label-md text-label-md shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Sport+</span>
+</button>
+<button class="drive-mode-btn h-11 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center gap-1.5 font-label-md text-label-md transition-all">
+<span class="material-symbols-outlined text-[18px]">sports_score</span>
+<span>Track</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-secondary bg-surface-container-low p-2.5 rounded-lg mt-1" id="drive-mode-desc">
+<span class="font-bold text-on-surface">Mode Sport+:</span> Respons throttle instan 0.05 detik, suspensi magnetorheological kaku 25%, dan transmisi dual-clutch mengutamakan kurva torsi maksimum.
+      </p>
+</div>
+<!-- Technical Specs Accordion Matrix -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1">
+<h3 class="font-headline-sm text-label-md font-bold text-on-surface">Spesifikasi Detail Perakitan</h3>
+<span class="font-label-caps text-[10px] text-secondary">AURA ARCHITECTURE</span>
+</div>
+<!-- Item 1: Powertrain & Sistem Penggerak -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden" open="">
+<summary class="flex items-center justify-between p-3 cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">electric_bolt</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Penggerak &amp; Arsitektur Motor</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-200 text-[20px]">expand_more</span>
+</summary>
+<div class="px-3 pb-3 flex flex-col gap-1.5 font-body-sm text-body-sm text-secondary">
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Konfigurasi Motor</span>
+<span class="font-semibold text-on-surface">Dual Permanent Magnet Synchronous</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Sistem Penggerak</span>
+<span class="font-semibold text-on-surface">Intelligent Torque Vectoring AWD</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Tegangan Arsitektur</span>
+<span class="font-semibold text-on-surface">800-Volt Ultra-High Voltage</span>
+</div>
+</div>
+</details>
+<!-- Item 2: Baterai & Efisiensi -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden">
+<summary class="flex items-center justify-between p-3 cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">battery_charging_full</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Paket Baterai 102 kWh Solid-State</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-200 text-[20px]">expand_more</span>
+</summary>
+<div class="px-3 pb-3 flex flex-col gap-1.5 font-body-sm text-body-sm text-secondary">
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Kapasitas Baterai</span>
+<span class="font-semibold text-on-surface">102.4 kWh Liquid-Cooled</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Kecepatan Cas (DC 350kW)</span>
+<span class="font-semibold text-primary">10% - 80% dalam 18 Menit</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Modul BMS</span>
+<span class="font-semibold text-on-surface">RPL Neural Thermal Monitor v3</span>
+</div>
+</div>
+</details>
+<!-- Item 3: Sasis & Suspensi -->
+<details class="group bg-surface-container-low rounded-xl overflow-hidden">
+<summary class="flex items-center justify-between p-3 cursor-pointer list-none select-none">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Chassis Monocoque &amp; Transmisi</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-200 text-[20px]">expand_more</span>
+</summary>
+<div class="px-3 pb-3 flex flex-col gap-1.5 font-body-sm text-body-sm text-secondary">
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Rangka Utama</span>
+<span class="font-semibold text-on-surface">Carbon Fiber Monocoque + Aero Titanium</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Transmisi</span>
+<span class="font-semibold text-on-surface">2-Speed Automated Dual-Shaft</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-lowest px-2.5 rounded-lg">
+<span>Pengereman</span>
+<span class="font-semibold text-on-surface">Carbon Ceramic Discs 420mm (Brembo Spec)</span>
+</div>
+</div>
+</details>
+</div>
+<!-- Student RPL Technology & Software Highlights -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">Kolaborasi Kejuruan RPL</span>
+<h3 class="font-headline-sm text-label-md font-bold text-on-surface">Software Otomotif Karya Siswa</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+        Seluruh unit kontrol elektronik Aura GT dikendalikan oleh sistem operasi real-time embedded Linux yang dirancang, di-compile, dan diuji langsung oleh talenta Rekayasa Perangkat Lunak.
+      </p>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-low p-2.5 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<div class="flex flex-col">
+<span class="font-label-md text-body-sm font-semibold text-on-surface">OTA Updates</span>
+<span class="font-label-caps text-[9px] text-secondary">Zero-Downtime Patch</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<div class="flex flex-col">
+<span class="font-label-md text-body-sm font-semibold text-on-surface">CAN-Bus Guard</span>
+<span class="font-label-caps text-[9px] text-secondary">Enkripsi Hardware</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Section: Floating / Pinned CTAs -->
+<div class="sticky bottom-20 z-30 pt-2 pb-1">
+<div class="bg-surface-container-lowest/90 backdrop-blur-xl p-3 rounded-2xl shadow-xl flex items-center gap-2">
+<!-- Main Primary CTA: Test Drive -->
+<a class="flex-1 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-2 font-label-md text-label-md font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" data-path="profil-test-drive" href="#">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<span>Jadwalkan Test Drive</span>
+</a>
+<!-- Secondary CTA: Unduh Brosur RPL -->
+<button class="h-12 px-3.5 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center gap-1.5 font-label-md text-label-md font-semibold hover:bg-surface-container-highest active:scale-[0.98] transition-all" id="btn-download-brochure" title="Unduh Brosur Teknis RPL">
+<span class="material-symbols-outlined text-[20px] text-primary">download</span>
+<span class="hidden sm:inline">Brosur RPL</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initInteractiveDetail() {
+    // Hotspots telemetry database
+    const hotspotData = {
+      headlamp: {
+        icon: 'light_mode',
+        tag: 'AERODINAMIKA & PENCAHAYAAN',
+        title: 'LED Matrix Laser with Aura Beam',
+        status: 'RPL Firmware v2.1',
+        desc: 'Proyektor adaptif cerdas yang dikendalikan oleh mikro-modul buatan tim RPL. Mengarahkan sorot cahaya secara otonom saat menikung dengan jangkauan 650 meter tanpa menyilaukan pengemudi lain.'
+      },
+      wheels: {
+        icon: 'adjust',
+        tag: 'SASIS & WHEELBASE',
+        title: 'Forged Carbon Aero Rims 21"',
+        status: 'Ultralight Spec',
+        desc: 'Pelek karbon komposit ultra-ringan dengan sirip bilah aerodinamis aktif untuk mendinginkan piringan rem keramik karbon Brembo 420mm saat pengereman intensif trek balap.'
+      },
+      motor: {
+        icon: 'bolt',
+        tag: 'POWERTRAIN 800-VOLT',
+        title: 'Dual Synchronous PMSM Motor',
+        status: 'Max 850 HP',
+        desc: 'Dua motor listrik ganda berpendingin oli mikro-saluran langsung. Menghasilkan tenaga seketika 850 HP dan torsi instan 1.050 Nm ke keempat roda melalui komputasi pintar.'
+      },
+      cockpit: {
+        icon: 'touch_app',
+        tag: 'INTERFACE PENGEMUDI',
+        title: 'AuraOS Smart Curved Display',
+        status: 'OS Siswa RPL',
+        desc: 'Layar OLED 4K melengkung terintegrasi penuh dengan telemetry track drive, status cell baterai realtime, serta HUD augmented reality di kaca depan.'
+      },
+      wing: {
+        icon: 'air',
+        tag: 'AERODINAMIS AKTIF',
+        title: 'Active Downforce Carbon Spoiler',
+        status: 'Aero Drag 0.21 Cd',
+        desc: 'Sayap belakang otomatis bervariasi sudut serangan 0° hingga 35° berdasarkan kecepatan kendaraan dan sensor akselerasi lateral untuk kestabilan manuver ekstrim.'
+      }
+    };
+
+    // Hotspot trigger clicks
+    const triggers = document.querySelectorAll('.hotspot-trigger');
+    const infoIcon = document.getElementById('tooltip-icon');
+    const infoTag = document.getElementById('tooltip-tag');
+    const infoTitle = document.getElementById('tooltip-title');
+    const infoStatus = document.getElementById('tooltip-status');
+    const infoDesc = document.getElementById('tooltip-desc');
+    const infoCard = document.getElementById('hotspot-info-card');
+
+    triggers.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pinKey = btn.getAttribute('data-pin');
+        const data = hotspotData[pinKey];
+        if (!data) return;
+
+        // Visual feedback on card
+        infoCard.classList.add('opacity-40');
+        setTimeout(() => {
+          infoIcon.textContent = data.icon;
+          infoTag.textContent = data.tag;
+          infoTitle.textContent = data.title;
+          infoStatus.textContent = data.status;
+          infoDesc.textContent = data.desc;
+          infoCard.classList.remove('opacity-40');
+        }, 120);
+
+        // Highlight selected pin
+        triggers.forEach(t => {
+          const core = t.querySelector('span.relative');
+          if (core) core.classList.remove('ring-2', 'ring-primary');
+        });
+        const currentCore = btn.querySelector('span.relative');
+        if (currentCore) currentCore.classList.add('ring-2', 'ring-primary');
+      });
+    });
+
+    // View toggler (Exterior 360 vs Cockpit)
+    const btnExterior = document.getElementById('btn-exterior-view');
+    const btnCockpit = document.getElementById('btn-cockpit-view');
+    const carImage = document.getElementById('car-stage-image');
+    const cockpitLayer = document.getElementById('cockpit-layer');
+
+    btnExterior.addEventListener('click', () => {
+      btnExterior.className = "flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all duration-200";
+      btnCockpit.className = "flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg text-secondary hover:text-on-surface font-label-md text-label-md transition-all duration-200";
+      carImage.classList.remove('hidden');
+      cockpitLayer.classList.add('hidden');
+      triggers.forEach(t => t.classList.remove('hidden'));
+    });
+
+    btnCockpit.addEventListener('click', () => {
+      btnCockpit.className = "flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all duration-200";
+      btnExterior.className = "flex-1 h-10 flex items-center justify-center gap-1.5 rounded-lg text-secondary hover:text-on-surface font-label-md text-label-md transition-all duration-200";
+      carImage.classList.add('hidden');
+      cockpitLayer.classList.remove('hidden');
+      triggers.forEach(t => t.classList.add('hidden'));
+
+      // Update tooltip info to cockpit
+      infoIcon.textContent = hotspotData.cockpit.icon;
+      infoTag.textContent = hotspotData.cockpit.tag;
+      infoTitle.textContent = hotspotData.cockpit.title;
+      infoStatus.textContent = hotspotData.cockpit.status;
+      infoDesc.textContent = hotspotData.cockpit.desc;
+    });
+
+    // Color Swatches interaction
+    const swatches = document.querySelectorAll('.color-swatch-btn');
+    const activeColorLabel = document.getElementById('active-color-name');
+
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const colorTitle = swatch.getAttribute('data-color');
+        const filterVal = swatch.getAttribute('data-filter');
+
+        activeColorLabel.textContent = colorTitle;
+        carImage.style.filter = filterVal;
+
+        // Reset rings
+        swatches.forEach(s => {
+          const wrapper = s.firstElementChild;
+          wrapper.className = "w-11 h-11 rounded-full p-0.5 bg-surface-container-high flex items-center justify-center transition-all duration-200";
+          const checkIcon = s.querySelector('.material-symbols-outlined');
+          if (checkIcon) checkIcon.remove();
+          const nameSpan = s.lastElementChild;
+          nameSpan.className = "font-label-caps text-[9px] text-secondary uppercase font-medium";
+        });
+
+        // Set active ring
+        const currentWrapper = swatch.firstElementChild;
+        currentWrapper.className = "w-11 h-11 rounded-full p-0.5 bg-primary flex items-center justify-center transition-all duration-200 shadow-md";
+        const innerCircle = currentWrapper.firstElementChild;
+        if (innerCircle) {
+          innerCircle.innerHTML = '<span class="material-symbols-outlined text-on-primary text-[16px]">check</span>';
+        }
+        const activeNameSpan = swatch.lastElementChild;
+        activeNameSpan.className = "font-label-caps text-[9px] text-primary font-bold uppercase";
+      });
+    });
+
+    // Drive Mode chips interaction
+    const driveBtns = document.querySelectorAll('.drive-mode-btn');
+    const driveModeDesc = document.getElementById('drive-mode-desc');
+    const driveDescriptions = {
+      'Comfort': '<span class="font-bold text-on-surface">Mode Comfort:</span> Penyaluran tenaga halus dan efisien, suspensi adaptif lembut untuk kenyamanan harian, jangkauan baterai optimal hingga 650 KM.',
+      'Sport+': '<span class="font-bold text-on-surface">Mode Sport+:</span> Respons throttle instan 0.05 detik, suspensi magnetorheological kaku 25%, dan transmisi dual-clutch mengutamakan kurva torsi maksimum.',
+      'Track': '<span class="font-bold text-on-surface">Mode Track:</span> Sistem stabilitas ESC non-aktif sebagian, pendinginan baterai bersiap balap sirkuit penuh, dan downforce aerodinamis aktif dikunci pada performa puncak.'
+    };
+
+    driveBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const modeText = btn.querySelector('span:last-child').textContent.trim();
+        driveBtns.forEach(b => {
+          b.className = "drive-mode-btn h-11 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center gap-1.5 font-label-md text-label-md transition-all";
+        });
+        btn.className = "drive-mode-btn h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center gap-1.5 font-label-md text-label-md shadow-md transition-all";
+
+        if (driveDescriptions[modeText]) {
+          driveModeDesc.innerHTML = driveDescriptions[modeText];
+        }
+      });
+    });
+
+    // Brochure download button notification micro-interaction
+    const brochureBtn = document.getElementById('btn-download-brochure');
+    if (brochureBtn) {
+      brochureBtn.addEventListener('click', () => {
+        const originalContent = brochureBtn.innerHTML;
+        brochureBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] text-emerald-600 animate-bounce">check_circle</span>';
+        setTimeout(() => {
+          brochureBtn.innerHTML = originalContent;
+        }, 2200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(11,28,48,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="showcase-katalog" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-caps text-[10px] tracking-tight">Showcase</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-12 transition-colors gap-0.5 text-primary font-semibold" data-path="detail-interaktif" href="#"><span class="material-symbols-outlined text-[22px]">view_in_ar</span><span class="font-label-caps text-[10px] tracking-tight">Interaktif</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="inovasi-rpl" href="#"><span class="material-symbols-outlined text-[22px]">memory</span><span class="font-label-caps text-[10px] tracking-tight">Inovasi RPL</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="profil-test-drive" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-caps text-[10px] tracking-tight">Profil / Drive</span></a></div></nav></body></html>

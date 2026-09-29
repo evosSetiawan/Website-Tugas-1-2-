@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Aura Motors — Showroom Mobil Interaktif & Katalog Eksklusif</title>
+  <meta name="description" content="Koleksi eksklusif mobil performa tinggi karya rekayasa mutakhir Aura Motors, memadukan aerodinamika presisi sirkuit dan teknologi digital interaktif."/>
+  
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#cbdbf5",
+            "on-surface-variant": "#5b403d",
+            "on-error-container": "#93000a",
+            "outline-variant": "#e4beb9",
+            "tertiary-fixed": "#ffd9dd",
+            "surface-container-low": "#eff4ff",
+            "primary-fixed-dim": "#ffb4ac",
+            "secondary": "#565e74",
+            "on-primary": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "on-tertiary-fixed": "#2f1317",
+            "on-primary-fixed": "#410002",
+            "on-secondary-fixed-variant": "#3f465c",
+            "tertiary-container": "#926a6f",
+            "tertiary": "#775256",
+            "on-primary-fixed-variant": "#93000d",
+            "surface-container-highest": "#d3e4fe",
+            "background": "#f8f9ff",
+            "primary-container": "#db322f",
+            "on-surface": "#0b1c30",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#131b2e",
+            "secondary-fixed-dim": "#bec6e0",
+            "outline": "#906f6c",
+            "tertiary-fixed-dim": "#ebbabf",
+            "surface-container": "#e5eeff",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#ffdad6",
+            "secondary-fixed": "#dae2fd",
+            "inverse-surface": "#213145",
+            "on-error": "#ffffff",
+            "primary": "#b7131a",
+            "surface-tint": "#bb171c",
+            "inverse-primary": "#ffb4ac",
+            "on-secondary-container": "#5c647a",
+            "on-tertiary-fixed-variant": "#603d42",
+            "on-tertiary-container": "#fffbff",
+            "secondary-container": "#dae2fd",
+            "surface": "#f8f9ff",
+            "surface-variant": "#d3e4fe",
+            "error": "#ba1a1a",
+            "on-background": "#0b1c30",
+            "on-primary-container": "#fffbff",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#dce9ff",
+            "inverse-on-surface": "#eaf1ff"
+          },
+          fontFamily: {
+            sans: ["'Plus Jakarta Sans'", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(183, 19, 26, 0.2);
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: rgba(183, 19, 26, 0.5);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface relative min-h-screen selection:bg-primary selection:text-on-primary">
+
+  <!-- Ambient Luminescent Background Glows -->
+  <div class="pointer-events-none fixed -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[130px] -z-10"></div>
+  <div class="pointer-events-none fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary/5 blur-[150px] -z-10"></div>
+  <div class="pointer-events-none fixed -bottom-40 -left-40 w-[550px] h-[550px] rounded-full bg-secondary-fixed/40 blur-[130px] -z-10"></div>
+
+  <!-- Unified Navigation Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface/85 backdrop-blur-xl border-b border-surface-container-high/60 shadow-[0_2px_12px_rgba(11,28,48,0.04)]">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="javascript:void(0)" onclick="navigateTo('showcase')" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-surface-container-lowest to-surface-container-high p-1.5 shadow-sm border border-surface-container-high flex items-center justify-center transition-transform group-hover:scale-105">
+          <img src="assets/02_aura_motors_brand_logo.png" alt="Aura Motors Emblem" class="w-full h-full object-contain"/>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xs uppercase tracking-[0.2em] font-extrabold text-primary leading-none">Aura</span>
+          <span class="text-lg font-black tracking-tight text-on-surface uppercase leading-tight">Motors</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Tabs -->
+      <nav class="hidden md:flex items-center gap-1 bg-surface-container-low/80 p-1.5 rounded-2xl border border-surface-container/60 shadow-inner">
+        <button id="nav-btn-showcase" onclick="navigateTo('showcase')" class="nav-tab px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">directions_car</span>
+          <span>Katalog Model</span>
+        </button>
+        <button id="nav-btn-interactive" onclick="navigateTo('interactive')" class="nav-tab px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+          <span>Detail Interaktif</span>
+        </button>
+        <button id="nav-btn-specs" onclick="navigateTo('specs')" class="nav-tab px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">tune</span>
+          <span>Spesifikasi & Riset</span>
+        </button>
+      </nav>
+
+      <!-- Action Buttons & Quick Test Drive -->
+      <div class="flex items-center gap-3">
+        <button onclick="openTestDriveModal()" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-inverse-surface text-inverse-on-surface text-xs font-bold uppercase tracking-wider transition-all duration-200 hover:bg-primary hover:text-on-primary hover:shadow-[0_8px_20px_rgba(183,19,26,0.3)] shadow-sm">
+          <span class="material-symbols-outlined text-[18px]">speed</span>
+          <span class="hidden sm:inline">Jadwalkan Test Drive</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content View Area -->
+  <main class="w-full pt-24 pb-28 md:pb-16 min-h-screen">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: SHOWCASE & KATALOG MODEL PANEL     -->
+    <!-- ========================================== -->
+    <section id="panel-showcase" class="view-panel block max-w-[1440px] mx-auto px-4 sm:px-8 transition-opacity duration-300">
+      
+      <!-- Hero Top Banner -->
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-3 pt-4 mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-primary">Lini Eksklusif 2025 // Seri Generasi V</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black text-on-surface tracking-tight leading-tight">
+          Definisi Kemewahan & Kecepatan Masa Depan
+        </h1>
+        <p class="text-base text-on-surface-variant max-w-2xl font-light">
+          Koleksi mahakarya rekayasa otomotif bertenaga listrik murni dengan aerodinamika presisi sirkuit dan teknologi kokpit digital pintar.
+        </p>
+      </div>
+
+      <!-- Hero Highlight Stage (Flagship Car) -->
+      <div class="relative w-full rounded-3xl bg-surface-container-lowest border border-surface-container-high shadow-xl overflow-hidden mb-12 group">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-40 bg-primary/15 blur-[90px] pointer-events-none"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 items-center p-6 sm:p-10 gap-8 relative z-10">
+          
+          <div class="lg:col-span-7 flex flex-col gap-4">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-md bg-primary text-on-primary text-[10px] font-extrabold uppercase tracking-wider">Flagship Hyper-GT</span>
+              <span class="px-3 py-1 rounded-md bg-surface-container-high text-on-surface text-[10px] font-bold uppercase tracking-wider">Genesis V.02</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-on-surface">Aura GT Crimson</h2>
+            <p class="text-on-surface-variant text-sm sm:text-base leading-relaxed">
+              Memadukan akselerasi instan 0-100 km/j dalam 2.4 detik dengan arsitektur kelistrikan 800V bertenaga buas 1.020 HP. Buka panel konfigurator untuk eksplorasi spesifikasi detail.
+            </p>
+
+            <!-- Quick Spec Badges -->
+            <div class="grid grid-cols-3 gap-3 pt-2">
+              <div class="p-3 rounded-2xl bg-surface-container-low border border-surface-container">
+                <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block">0 - 100 KM/J</span>
+                <span class="text-xl sm:text-2xl font-extrabold text-primary">2.4<span class="text-xs font-normal text-on-surface-variant ml-1">detik</span></span>
+              </div>
+              <div class="p-3 rounded-2xl bg-surface-container-low border border-surface-container">
+                <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block">Daya Maksimal</span>
+                <span class="text-xl sm:text-2xl font-extrabold text-on-surface">1,020<span class="text-xs font-normal text-on-surface-variant ml-1">HP</span></span>
+              </div>
+              <div class="p-3 rounded-2xl bg-surface-container-low border border-surface-container">
+                <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-wider block">Jarak Jelajah</span>
+                <span class="text-xl sm:text-2xl font-extrabold text-on-surface">620<span class="text-xs font-normal text-on-surface-variant ml-1">KM</span></span>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-4">
+              <button onclick="selectCarAndOpenInteractive('aura-gt')" class="px-6 py-3 rounded-xl bg-primary text-on-primary font-bold text-xs uppercase tracking-wider hover:bg-primary-container shadow-md hover:shadow-lg transition-all flex items-center gap-2">
+                <span>Eksplorasi Detail Interaktif</span>
+                <span class="material-symbols-outlined text-[18px]">tune</span>
+              </button>
+              <button onclick="openTestDriveModal('Aura GT Crimson')" class="px-5 py-3 rounded-xl bg-surface-container-high text-on-surface font-bold text-xs uppercase tracking-wider hover:bg-surface-container hover:text-primary transition-all flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                <span>Uji Kemudi</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Car Image -->
+          <div class="lg:col-span-5 relative flex items-center justify-center">
+            <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl bg-gradient-to-b from-surface-container-lowest to-surface-container-low p-2 shadow-inner border border-surface-container-high">
+              <img src="assets/03_coupe_hero_photography.png" alt="Aura GT Crimson Showroom" class="w-full h-full object-cover rounded-xl transition-transform duration-700 group-hover:scale-105"/>
+              <div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-surface-container text-xs font-bold text-on-surface flex items-center gap-1.5 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Showroom 3D Ready</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Filter Tabs & Search Header -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+        <!-- Category Filter -->
+        <div class="flex items-center gap-1 bg-surface-container p-1 rounded-2xl w-full md:w-auto overflow-x-auto custom-scrollbar">
+          <button class="filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all bg-surface-container-lowest text-primary shadow-sm" data-category="all" onclick="filterCatalog('all', this)">
+            Semua Model
+          </button>
+          <button class="filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all text-on-surface-variant hover:text-on-surface" data-category="electric-gt" onclick="filterCatalog('electric-gt', this)">
+            Electric GT
+          </button>
+          <button class="filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all text-on-surface-variant hover:text-on-surface" data-category="hypercar" onclick="filterCatalog('hypercar', this)">
+            Hypercar
+          </button>
+          <button class="filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all text-on-surface-variant hover:text-on-surface" data-category="concept" onclick="filterCatalog('concept', this)">
+            Konsep & SUV
+          </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <div class="relative flex-1 md:w-80">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+            <input id="catalog-search-input" oninput="searchCatalog(this.value)" class="w-full pl-10 pr-4 py-2.5 bg-surface-container-lowest border border-surface-container text-on-surface text-xs rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-on-surface-variant/60" placeholder="Cari tipe model atau spesifikasi..." type="text"/>
+          </div>
+          <div class="hidden sm:flex items-center gap-2 px-3 py-2.5 rounded-xl bg-surface-container text-on-surface-variant text-xs font-bold">
+            <span class="w-2 h-2 rounded-full bg-primary"></span>
+            <span id="active-units-count">4 UNIT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Grid Cards -->
+      <div id="cars-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-16">
+        
+        <!-- Car Card 1: Aura GT Crimson -->
+        <div class="car-card group flex flex-col justify-between rounded-2xl bg-surface-container-lowest border border-surface-container hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 p-5 overflow-hidden" data-category="electric-gt" data-model="aura-gt">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded-md bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider">Grand Tourer • Flagship</span>
+              <span class="material-symbols-outlined text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            </div>
+            
+            <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+              <img src="assets/03_coupe_hero_photography.png" alt="Aura GT Crimson" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-[10px] font-semibold">
+                Rosso Monza Tint
+              </div>
+            </div>
+
+            <h3 class="text-lg font-extrabold text-on-surface mb-1">Aura GT Crimson</h3>
+            <p class="text-xs text-on-surface-variant line-clamp-2 mb-4">
+              Kombinasi sempurna antara tenaga murni 1.020 hp dan siluet aerodinamis kelas galeri.
+            </p>
+
+            <div class="grid grid-cols-3 gap-1 p-2 rounded-xl bg-surface-container-low mb-4 text-center">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Tenaga</span>
+                <span class="text-xs font-bold text-on-surface">1,020 HP</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Jarak</span>
+                <span class="text-xs font-bold text-on-surface">620 KM</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">0-100</span>
+                <span class="text-xs font-extrabold text-primary">2.4 S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-surface-container flex flex-col gap-3">
+            <div class="flex items-baseline justify-between">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant">Estimasi Ritel</span>
+              <span class="text-base font-extrabold text-on-surface">Rp 3.850.000.000</span>
+            </div>
+            <button onclick="selectCarAndOpenInteractive('aura-gt')" class="w-full py-2.5 rounded-xl bg-primary text-on-primary font-bold text-xs uppercase tracking-wider hover:bg-primary-container shadow-sm transition-all flex items-center justify-center gap-2">
+              <span>Detail Interaktif</span>
+              <span class="material-symbols-outlined text-[16px]">tune</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Card 2: Aura Phantom SV -->
+        <div class="car-card group flex flex-col justify-between rounded-2xl bg-surface-container-lowest border border-surface-container hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 p-5 overflow-hidden" data-category="hypercar" data-model="phantom-sv">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">Cyber Coupe</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-secondary">Edisi Sirkuit</span>
+            </div>
+            
+            <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCH7A3Mw106NmGJVvSfU8MtiRNyG4HxcDBs8JBEBtwLUzYnp_cj604SG5SBbvADA9xhUlkcZTjelftnFOvE28kk7Adq1E1vSo8JHCr9vpBYFJ96q5-mfCmlI4gdb0ujsmfsvB6ksn2nJ9By07j1MFZB_qaXQAhlQDKAlvEaa79akJSzQn3w84ZUxEKEfQQ2GigjlMuRURTHSs9G8uaU1pCQhxYwNzBCzZTYHOwr5cMcPS6z7ZRHMmV" alt="Aura Phantom SV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-[10px] font-semibold">
+                Carbon Stealth Gloss
+              </div>
+            </div>
+
+            <h3 class="text-lg font-extrabold text-on-surface mb-1">Aura Phantom SV</h3>
+            <p class="text-xs text-on-surface-variant line-clamp-2 mb-4">
+              Diciptakan untuk presisi trek ekstrim dengan sasis monokok serat karbon ultra-ringan.
+            </p>
+
+            <div class="grid grid-cols-3 gap-1 p-2 rounded-xl bg-surface-container-low mb-4 text-center">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Tenaga</span>
+                <span class="text-xs font-bold text-on-surface">1,180 HP</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Jarak</span>
+                <span class="text-xs font-bold text-on-surface">540 KM</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">0-100</span>
+                <span class="text-xs font-extrabold text-primary">2.1 S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-surface-container flex flex-col gap-3">
+            <div class="flex items-baseline justify-between">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant">Estimasi Ritel</span>
+              <span class="text-base font-extrabold text-on-surface">Rp 4.400.000.000</span>
+            </div>
+            <button onclick="selectCarAndOpenInteractive('phantom-sv')" class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-bold text-xs uppercase tracking-wider hover:bg-inverse-surface hover:text-inverse-on-surface transition-all flex items-center justify-center gap-2">
+              <span>Detail Interaktif</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Card 3: Aura E-Sprint -->
+        <div class="car-card group flex flex-col justify-between rounded-2xl bg-surface-container-lowest border border-surface-container hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 p-5 overflow-hidden" data-category="hypercar" data-model="e-sprint">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">Hyper Roadster</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-primary">Limited 50</span>
+            </div>
+            
+            <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuABd9_q6ZyLgnsdTTS_fhWBa0qTZTNom4kdxafUSZrDcRWQwIQPdpdyafXlQc2-DSILLPoWShevL0kO1_5JTRDTDcVEtM9qTIe8AaudNWxCQRhjQ1z11rHiiV_dgjbvJmwOFy9OOhKdpbonAoTFjNW29H3oEfp9PzOZoBhFX_t5gCxl1nNLroT8J0aAQ86fCWP-S3lLL4Q4muPdmsmP1Om3Sy1siXElDwVtZWWmWDKD-hLtCF-q5QtY" alt="Aura E-Sprint" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-[10px] font-semibold">
+                Liquid Quicksilver
+              </div>
+            </div>
+
+            <h3 class="text-lg font-extrabold text-on-surface mb-1">Aura E-Sprint</h3>
+            <p class="text-xs text-on-surface-variant line-clamp-2 mb-4">
+              Sensasi atap terbuka tanpa kompromi, mengadopsi twin-motor AWD berbobot ringan.
+            </p>
+
+            <div class="grid grid-cols-3 gap-1 p-2 rounded-xl bg-surface-container-low mb-4 text-center">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Tenaga</span>
+                <span class="text-xs font-bold text-on-surface">890 HP</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Jarak</span>
+                <span class="text-xs font-bold text-on-surface">590 KM</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">0-100</span>
+                <span class="text-xs font-extrabold text-primary">2.6 S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-surface-container flex flex-col gap-3">
+            <div class="flex items-baseline justify-between">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant">Estimasi Ritel</span>
+              <span class="text-base font-extrabold text-on-surface">Rp 3.250.000.000</span>
+            </div>
+            <button onclick="selectCarAndOpenInteractive('e-sprint')" class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-bold text-xs uppercase tracking-wider hover:bg-inverse-surface hover:text-inverse-on-surface transition-all flex items-center justify-center gap-2">
+              <span>Detail Interaktif</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Car Card 4: Aura Apex SUV -->
+        <div class="car-card group flex flex-col justify-between rounded-2xl bg-surface-container-lowest border border-surface-container hover:border-primary/40 shadow-sm hover:shadow-xl transition-all duration-300 p-5 overflow-hidden" data-category="concept" data-model="apex-suv">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">Performance Luxury</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-secondary">All-Terrain</span>
+            </div>
+            
+            <div class="relative w-full h-44 rounded-xl overflow-hidden mb-4 bg-surface-container-low">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUXq1FBnjvVOquXwlBNwE8lyivDiqpl3qS1tHxL6K3r1MM4F7BtdCIDvyA9iFCayCSZeOnRZ88Nqd8UDc33nk6_qyjJeBlEPKDjQ410pMjhVRGvBwT2DPX3uyGjHPPRmjqk6fOSZ9ueraK2bNp2dMGJi625FtWy7dfT6NW5fpBkfZp-ZSAGf6E3BluiY3z7ePvZ4ptYMXsHVkdeZZ5W61ai41w-gQzTrYvVmXcXGvwIUAHrHzc1rW9" alt="Aura Apex SUV" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-[10px] font-semibold">
+                Crimson Obsidian Duo
+              </div>
+            </div>
+
+            <h3 class="text-lg font-extrabold text-on-surface mb-1">Aura Apex SUV</h3>
+            <p class="text-xs text-on-surface-variant line-clamp-2 mb-4">
+              Performa grand-tourer dalam siluet SUV revolusioner dengan suspensi udara prediktif.
+            </p>
+
+            <div class="grid grid-cols-3 gap-1 p-2 rounded-xl bg-surface-container-low mb-4 text-center">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Tenaga</span>
+                <span class="text-xs font-bold text-on-surface">960 HP</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">Jarak</span>
+                <span class="text-xs font-bold text-on-surface">680 KM</span>
+              </div>
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-on-surface-variant block">0-100</span>
+                <span class="text-xs font-extrabold text-primary">2.9 S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-surface-container flex flex-col gap-3">
+            <div class="flex items-baseline justify-between">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant">Estimasi Ritel</span>
+              <span class="text-base font-extrabold text-on-surface">Rp 3.600.000.000</span>
+            </div>
+            <button onclick="selectCarAndOpenInteractive('apex-suv')" class="w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-bold text-xs uppercase tracking-wider hover:bg-inverse-surface hover:text-inverse-on-surface transition-all flex items-center justify-center gap-2">
+              <span>Detail Interaktif</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: DETAIL INTERAKTIF & CONFIGURATOR   -->
+    <!-- ========================================== -->
+    <section id="panel-interactive" class="view-panel hidden max-w-[1440px] mx-auto px-4 sm:px-8 transition-opacity duration-300">
+      
+      <!-- Top Sub-Nav & Breadcrumb -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-surface-container">
+        <div class="flex items-center gap-2 text-xs uppercase tracking-wider text-on-surface-variant font-bold">
+          <button onclick="navigateTo('showcase')" class="hover:text-primary transition-colors flex items-center gap-1">
+            <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+            <span>Kembali ke Katalog</span>
+          </button>
+          <span>/</span>
+          <span class="text-primary" id="inter-breadcrumb-name">Aura GT Crimson</span>
+          <span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed text-[10px]">GENESIS V.02</span>
+        </div>
+
+        <!-- Car Switcher Pills -->
+        <div class="flex items-center gap-1 bg-surface-container p-1 rounded-xl overflow-x-auto max-w-full">
+          <button class="model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-surface-container-lowest text-primary shadow-sm" data-model="aura-gt" onclick="switchInteractiveModel('aura-gt', this)">
+            GT Crimson
+          </button>
+          <button class="model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-on-surface-variant hover:text-on-surface" data-model="phantom-sv" onclick="switchInteractiveModel('phantom-sv', this)">
+            Phantom SV
+          </button>
+          <button class="model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-on-surface-variant hover:text-on-surface" data-model="e-sprint" onclick="switchInteractiveModel('e-sprint', this)">
+            E-Sprint
+          </button>
+          <button class="model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-on-surface-variant hover:text-on-surface" data-model="apex-suv" onclick="switchInteractiveModel('apex-suv', this)">
+            Apex SUV
+          </button>
+        </div>
+      </div>
+
+      <!-- Vehicle Title Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-primary block mb-1">Inovasi Presisi Hyper-Tourer Listrik</span>
+          <h2 id="inter-car-title" class="text-3xl sm:text-5xl font-black text-on-surface uppercase tracking-tight">
+            Aura GT <span class="text-primary italic">Crimson</span>
+          </h2>
+          <p id="inter-car-desc" class="text-sm sm:text-base text-on-surface-variant max-w-2xl mt-2 font-light">
+            Eksplorasi mahakarya rekayasa perangkat keras dan komputasi kendaraan listrik modern dengan arsitektur 800-volt bertenaga buas, diselimuti lekukan aerodinamis berseni tinggi.
+          </p>
+        </div>
+
+        <!-- Live Telemetry Badges -->
+        <div class="flex items-center gap-3">
+          <div class="p-3 sm:p-4 rounded-2xl bg-surface-container-lowest border border-surface-container shadow-sm flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-[24px]">speed</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant block">0 - 100 KM/H</span>
+              <span id="inter-car-accel" class="text-lg sm:text-xl font-black text-on-surface">2.4 <span class="text-xs font-normal">detik</span></span>
+            </div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-surface-container-lowest border border-surface-container shadow-sm flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-[24px]">bolt</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant block">Output Total</span>
+              <span id="inter-car-power" class="text-lg sm:text-xl font-black text-on-surface">1,020 <span class="text-xs font-normal">HP</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE CAR STAGE ARENA -->
+      <div class="relative w-full rounded-3xl bg-surface-container-lowest border border-surface-container shadow-xl p-4 sm:p-8 mb-8 overflow-hidden">
+        
+        <!-- Ambient Glowing Aura Behind Graphic -->
+        <div id="stage-ambient-glow" class="absolute inset-0 m-auto w-4/5 h-3/5 rounded-full bg-primary/20 blur-[130px] pointer-events-none transition-all duration-700"></div>
+
+        <!-- Stage Toolbar & Instructions -->
+        <div class="relative z-20 flex flex-wrap items-center justify-between gap-3 mb-6">
+          <div class="flex items-center gap-2 bg-surface-container-low/90 backdrop-blur-md px-4 py-2 rounded-xl border border-surface-container">
+            <span class="material-symbols-outlined text-primary text-[18px]">touch_app</span>
+            <span class="text-xs font-semibold text-on-surface">Klik pin hotspot untuk membuka telemetri komponen</span>
+          </div>
+
+          <div class="flex items-center gap-1.5 bg-surface-container-low/90 backdrop-blur-md p-1 rounded-xl border border-surface-container">
+            <button id="view-mode-ext" onclick="toggleStageView('exterior')" class="px-4 py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface text-xs font-bold uppercase tracking-wider transition-all">
+              Eksterior 360°
+            </button>
+            <button id="view-mode-int" onclick="toggleStageView('interior')" class="px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface text-xs font-bold uppercase tracking-wider transition-all">
+              Kokpit Digital
+            </button>
+            <button onclick="closeAllHotspots()" class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary transition-all" title="Tutup Semua Hotspot">
+              <span class="material-symbols-outlined text-[18px]">restart_alt</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Visual Arena & Hotspots Container -->
+        <div class="relative z-10 w-full min-h-[380px] sm:min-h-[500px] flex items-center justify-center rounded-2xl bg-gradient-to-b from-surface-container/20 to-surface-container-low/40 p-4 overflow-visible">
+          
+          <!-- Car Display Graphic -->
+          <img id="stage-car-img" src="assets/03_coupe_hero_photography.png" alt="Interactive Vehicle Visual" class="w-full max-h-[520px] object-contain drop-shadow-2xl transition-all duration-700 select-none pointer-events-none"/>
+
+          <!-- HOTSPOT 1: Headlight -->
+          <div id="hotspot-headlight" class="hotspot-node absolute top-[50%] left-[32%] z-30">
+            <button onclick="toggleHotspot('panel-hl')" class="relative w-8 h-8 rounded-full bg-inverse-surface flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-125 focus:outline-none">
+              <span class="absolute inset-0 rounded-full bg-primary/40 animate-ping"></span>
+              <span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+            </button>
+            <div id="panel-hl" class="hotspot-popup hidden absolute bottom-12 -left-28 sm:-left-36 w-72 sm:w-80 glass-card border border-surface-container-high p-4 rounded-2xl shadow-2xl z-40 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[10px] font-extrabold uppercase">Pencahayaan Fotonik</span>
+                <button onclick="closeHotspot('panel-hl')" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">close</span></button>
+              </div>
+              <h4 class="text-sm font-extrabold text-on-surface mb-1">LED Matrix Laser Headlamp</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">
+                Pencahayaan adaptif cerdas berjarak pancar 600 meter dengan pemindai objek berbasis neural engine untuk mencegah silau.
+              </p>
+              <div class="bg-surface-container-low p-2 rounded-xl flex items-center justify-between text-xs">
+                <span class="text-on-surface-variant uppercase font-bold text-[10px]">Jangkauan Proyeksi</span>
+                <span class="text-primary font-extrabold">600 Meter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOTSPOT 2: Carbon Wheels -->
+          <div id="hotspot-wheels" class="hotspot-node absolute top-[64%] left-[49%] z-30">
+            <button onclick="toggleHotspot('panel-wh')" class="relative w-8 h-8 rounded-full bg-inverse-surface flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-125 focus:outline-none">
+              <span class="absolute inset-0 rounded-full bg-primary/40 animate-ping"></span>
+              <span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+            </button>
+            <div id="panel-wh" class="hotspot-popup hidden absolute bottom-12 -left-32 sm:-left-40 w-72 sm:w-80 glass-card border border-surface-container-high p-4 rounded-2xl shadow-2xl z-40 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[10px] font-extrabold uppercase">Footwork & Brembo</span>
+                <button onclick="closeHotspot('panel-wh')" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">close</span></button>
+              </div>
+              <h4 class="text-sm font-extrabold text-on-surface mb-1">21-Inch Forged Carbon Wheels</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">
+                Pelek serat karbon tempa dengan kaliper rem ceramic 420mm tahan suhu sirkuit ekstrem.
+              </p>
+              <div class="bg-surface-container-low p-2 rounded-xl flex items-center justify-between text-xs">
+                <span class="text-on-surface-variant uppercase font-bold text-[10px]">Cakram Keramik</span>
+                <span class="text-primary font-extrabold">Carbon-Ceramic 420mm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOTSPOT 3: Powertrain 800V -->
+          <div id="hotspot-powertrain" class="hotspot-node absolute top-[46%] left-[23%] z-30">
+            <button onclick="toggleHotspot('panel-pt')" class="relative w-8 h-8 rounded-full bg-inverse-surface flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-125 focus:outline-none">
+              <span class="absolute inset-0 rounded-full bg-primary/40 animate-ping"></span>
+              <span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+            </button>
+            <div id="panel-pt" class="hotspot-popup hidden absolute top-12 -left-16 sm:-left-24 w-72 sm:w-84 glass-card border border-surface-container-high p-4 rounded-2xl shadow-2xl z-40 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[10px] font-extrabold uppercase">Arsitektur Baterai 800V</span>
+                <button onclick="closeHotspot('panel-pt')" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">close</span></button>
+              </div>
+              <h4 class="text-sm font-extrabold text-on-surface mb-1">Dual-Motor Ultra EV</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">
+                Daya pengisian kilat DC 350kW dari 10% hingga 80% hanya dalam 14 menit dengan modul pendinginan imersi cair.
+              </p>
+              <div class="grid grid-cols-2 gap-2 bg-surface-container-low p-2 rounded-xl text-center text-xs">
+                <div>
+                  <span class="text-on-surface-variant text-[10px] uppercase font-bold block">Kapasitas</span>
+                  <span class="font-extrabold text-on-surface">102 kWh</span>
+                </div>
+                <div>
+                  <span class="text-on-surface-variant text-[10px] uppercase font-bold block">Fast Charge</span>
+                  <span class="font-extrabold text-primary">14 Menit (80%)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOTSPOT 4: Cockpit Intelligence -->
+          <div id="hotspot-cockpit" class="hotspot-node absolute top-[38%] left-[53%] z-30">
+            <button onclick="toggleHotspot('panel-cp')" class="relative w-8 h-8 rounded-full bg-inverse-surface flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-125 focus:outline-none">
+              <span class="absolute inset-0 rounded-full bg-primary/40 animate-ping"></span>
+              <span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+            </button>
+            <div id="panel-cp" class="hotspot-popup hidden absolute bottom-12 -left-36 sm:-left-44 w-72 sm:w-84 glass-card border border-surface-container-high p-4 rounded-2xl shadow-2xl z-40 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[10px] font-extrabold uppercase">Digital Interior Suite</span>
+                <button onclick="closeHotspot('panel-cp')" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">close</span></button>
+              </div>
+              <h4 class="text-sm font-extrabold text-on-surface mb-1">Aura Intelligent Cockpit</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">
+                Layar OLED melengkung 16 inci terintegrasi AI telemetri balap, biometric face ID, dan Augmented Reality Head-Up Display.
+              </p>
+              <div class="bg-surface-container-low p-2 rounded-xl flex items-center justify-between text-xs">
+                <span class="text-on-surface-variant uppercase font-bold text-[10px]">Sistem Operasi</span>
+                <span class="text-on-surface font-extrabold">AuraOS v3.4</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- HOTSPOT 5: Active Carbon Spoiler -->
+          <div id="hotspot-spoiler" class="hotspot-node absolute top-[42%] left-[74%] z-30">
+            <button onclick="toggleHotspot('panel-sp')" class="relative w-8 h-8 rounded-full bg-inverse-surface flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-125 focus:outline-none">
+              <span class="absolute inset-0 rounded-full bg-primary/40 animate-ping"></span>
+              <span class="w-3 h-3 rounded-full bg-surface-container-lowest"></span>
+            </button>
+            <div id="panel-sp" class="hotspot-popup hidden absolute bottom-12 -left-48 sm:-left-56 w-72 sm:w-80 glass-card border border-surface-container-high p-4 rounded-2xl shadow-2xl z-40 transition-all">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-md bg-surface-container text-primary text-[10px] font-extrabold uppercase">Aerodinamika Aktif</span>
+                <button onclick="closeHotspot('panel-sp')" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined text-[16px]">close</span></button>
+              </div>
+              <h4 class="text-sm font-extrabold text-on-surface mb-1">Active Carbon Airbrake</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed mb-3">
+                Sayap belakang serat karbon yang mengatur sudut downforce otomatis saat bermanuver dan memberi daya henti rem udara seketika.
+              </p>
+              <div class="bg-surface-container-low p-2 rounded-xl flex items-center justify-between text-xs">
+                <span class="text-on-surface-variant uppercase font-bold text-[10px]">Airbrake Response</span>
+                <span class="text-primary font-extrabold">0.18 Detik</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Telemetry Bottom Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-surface-container mt-6">
+          <div class="p-3 bg-surface-container-low rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant block">Jarak Jelajah (WLTP)</span>
+            <span id="stat-range" class="text-lg font-black text-on-surface">620 KM</span>
+          </div>
+          <div class="p-3 bg-surface-container-low rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant block">Torsi Maksimum</span>
+            <span id="stat-torque" class="text-lg font-black text-on-surface">1,050 Nm</span>
+          </div>
+          <div class="p-3 bg-surface-container-low rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant block">Kecepatan Puncak</span>
+            <span id="stat-speed" class="text-lg font-black text-on-surface">340 KM/H</span>
+          </div>
+          <div class="p-3 bg-surface-container-low rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant block">Arsitektur Cas</span>
+            <span class="text-lg font-black text-primary">Ultra 800V</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONFIGURATOR CONTROLS: COLOR PALETTE & DRIVE MODES -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+        
+        <!-- Color Customizer -->
+        <div class="lg:col-span-6 p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary">Kustomisasi Corak Eksterior</span>
+              <span id="color-finish-label" class="text-[10px] uppercase font-bold text-on-surface-variant">Metallic High-Gloss Coat</span>
+            </div>
+            <h3 id="color-title-label" class="text-xl font-extrabold text-on-surface mb-2">Ruby Red Metallic</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed mb-6">
+              Formula cat nanokomposit berlapis tiga yang membiaskan pantulan cahaya crimson dinamis saat kendaraan melaju kencang di bawah pencahayaan sirkuit.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-surface-container">
+            <span class="text-[10px] uppercase font-bold text-on-surface-variant block mb-3">Pilih Corak Aura:</span>
+            <div class="flex items-center gap-4">
+              <!-- Ruby Red -->
+              <button onclick="changeCarColor('ruby-red', this)" class="color-swatch-btn relative w-11 h-11 rounded-full bg-primary ring-4 ring-primary-fixed shadow-md transition-all scale-110" title="Ruby Red Metallic" data-finish="Metallic High-Gloss Coat" data-name="Ruby Red Metallic"></button>
+              <!-- Polar White -->
+              <button onclick="changeCarColor('polar-white', this)" class="color-swatch-btn relative w-11 h-11 rounded-full bg-[#f1f5f9] border border-slate-300 hover:ring-2 hover:ring-surface-dim shadow-sm transition-all" title="Polar White" data-finish="Ceramic Pearl Finish" data-name="Polar White"></button>
+              <!-- Cyber Grey -->
+              <button onclick="changeCarColor('cyber-grey', this)" class="color-swatch-btn relative w-11 h-11 rounded-full bg-[#64748b] hover:ring-2 hover:ring-surface-dim shadow-sm transition-all" title="Cyber Grey" data-finish="Titanium Matte Anodized" data-name="Cyber Grey"></button>
+              <!-- Carbon Obsidian -->
+              <button onclick="changeCarColor('carbon-obsidian', this)" class="color-swatch-btn relative w-11 h-11 rounded-full bg-[#0f172a] hover:ring-2 hover:ring-surface-dim shadow-sm transition-all" title="Carbon Obsidian" data-finish="Exposed Weave Carbon Tint" data-name="Carbon Obsidian"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Driving Dynamics Selector -->
+        <div class="lg:col-span-6 p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold uppercase tracking-wider text-primary">Dinamika Pengendaraan</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[10px] font-extrabold uppercase">Preset Aktif</span>
+            </div>
+            <h3 id="mode-title-label" class="text-xl font-extrabold text-on-surface mb-2">Sport+ Dynamic</h3>
+            <p id="mode-desc-label" class="text-xs text-on-surface-variant leading-relaxed mb-6">
+              Responsivitas throttle maksimum, peredaman suspensi adaptif magnetorheological mengeras 35%, dan spoiler belakang otomatis pada sudut downforce 18°.
+            </p>
+          </div>
+
+          <!-- Mode Buttons -->
+          <div class="grid grid-cols-3 gap-2">
+            <button onclick="changeDriveMode('comfort', this)" class="drive-mode-btn p-3 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container text-left transition-all">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant block">01 / JELAJAH</span>
+              <span class="text-xs font-extrabold block">Comfort</span>
+            </button>
+            <button onclick="changeDriveMode('sport', this)" class="drive-mode-btn p-3 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-md text-left transition-all">
+              <span class="text-[10px] uppercase font-bold text-primary-fixed block">02 / PERFORMA</span>
+              <span class="text-xs font-extrabold block">Sport+</span>
+            </button>
+            <button onclick="changeDriveMode('track', this)" class="drive-mode-btn p-3 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container text-left transition-all">
+              <span class="text-[10px] uppercase font-bold text-on-surface-variant block">03 / SIRKUIT</span>
+              <span class="text-xs font-extrabold block">Track</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Footer for Interactive -->
+      <div class="p-6 rounded-3xl bg-surface-container-low border border-surface-container flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="text-base font-extrabold text-on-surface">Tertarik Menguji Mobil Ini di Sirkuit?</h4>
+          <p class="text-xs text-on-surface-variant">Sesi VIP test drive eksklusif dengan pendampingan teknisi balap profesional.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="downloadSpecsPDF()" class="px-5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface border border-surface-container hover:bg-surface-container text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            <span>Unduh Brosur Spek</span>
+          </button>
+          <button onclick="openTestDriveModal()" class="px-6 py-2.5 rounded-xl bg-primary text-on-primary text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-md transition-all flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[18px]">key</span>
+            <span>Jadwalkan Test Drive</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: SPESIFIKASI & TEKNOLOGI INOVASI   -->
+    <!-- ========================================== -->
+    <section id="panel-specs" class="view-panel hidden max-w-[1440px] mx-auto px-4 sm:px-8 transition-opacity duration-300">
+      
+      <div class="max-w-4xl mx-auto text-center space-y-3 pt-4 mb-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 shadow-sm">
+          <span class="material-symbols-outlined text-primary text-[18px]">memory</span>
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-primary">Rekayasa & Komputasi Cerdas</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-on-surface tracking-tight">
+          Spesifikasi Teknis & Inovasi Perangkat Lunak
+        </h2>
+        <p class="text-sm sm:text-base text-on-surface-variant max-w-2xl mx-auto font-light">
+          Rancang bangun komparatif lini kendaraan Aura Motors, menggabungkan arsitektur bertenaga 800V dengan kecerdasan komputasi AuraOS.
+        </p>
+      </div>
+
+      <!-- Bento Grid Stats & Research -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
+        
+        <!-- Bento 1: Aerodynamics -->
+        <div class="md:col-span-4 p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Koefisien Hambat Udara</span>
+            <span class="material-symbols-outlined text-primary text-[24px]">air</span>
+          </div>
+          <div class="my-2">
+            <span class="text-4xl font-black text-on-surface">0.198 <span class="text-lg font-bold text-on-surface-variant">Cd</span></span>
+            <div class="w-full bg-surface-container rounded-full h-2 mt-4 overflow-hidden">
+              <div class="bg-primary h-2 rounded-full w-[94%]"></div>
+            </div>
+          </div>
+          <span class="text-xs text-on-surface-variant mt-2">Terendah di kelas luxury electric grand tourer dunia.</span>
+        </div>
+
+        <!-- Bento 2: Fast Charging 800V -->
+        <div class="md:col-span-4 p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Ultra-Fast 800V Charge</span>
+            <span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+          </div>
+          <div class="my-2">
+            <span class="text-4xl font-black text-on-surface">12 <span class="text-lg font-bold text-on-surface-variant">Menit</span></span>
+            <div class="w-full bg-surface-container rounded-full h-2 mt-4 overflow-hidden">
+              <div class="bg-primary h-2 rounded-full w-[85%]"></div>
+            </div>
+          </div>
+          <span class="text-xs text-on-surface-variant mt-2">Pengisian 10% ke 80% dengan DC Hypercharger 350kW.</span>
+        </div>
+
+        <!-- Bento 3: Torque Vectoring AWD -->
+        <div class="md:col-span-4 p-6 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Distribusi Torsi Pintar</span>
+            <span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold">ACTIVE AWD</span>
+          </div>
+          <div class="my-2">
+            <span class="text-4xl font-black text-on-surface">1,350 <span class="text-lg font-bold text-on-surface-variant">Nm</span></span>
+            <div class="w-full bg-surface-container rounded-full h-2 mt-4 overflow-hidden">
+              <div class="bg-primary h-2 rounded-full w-[98%]"></div>
+            </div>
+          </div>
+          <span class="text-xs text-on-surface-variant mt-2">Torque vectoring independen milidetik per roda.</span>
+        </div>
+
+        <!-- Comparative Specs Table -->
+        <div class="md:col-span-12 p-6 sm:p-8 rounded-3xl bg-surface-container-lowest border border-surface-container shadow-sm overflow-x-auto">
+          <h3 class="text-xl font-extrabold text-on-surface mb-4">Tabel Komparasi Lini Aura Motors</h3>
+          <table class="w-full text-left text-xs min-w-[600px]">
+            <thead>
+              <tr class="border-b border-surface-container text-on-surface-variant uppercase font-bold">
+                <th class="py-3 px-4">Model Kendaraan</th>
+                <th class="py-3 px-4">Tipe Penggerak</th>
+                <th class="py-3 px-4">Tenaga Kuda</th>
+                <th class="py-3 px-4">0-100 KM/J</th>
+                <th class="py-3 px-4">Jarak Tempuh</th>
+                <th class="py-3 px-4">Baterai & Arsitektur</th>
+                <th class="py-3 px-4 text-right">Aksi</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-surface-container font-medium">
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 font-bold text-on-surface flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-primary"></span>
+                  <span>Aura GT Crimson (Flagship)</span>
+                </td>
+                <td class="py-4 px-4 text-on-surface-variant">Dual-Motor All-Wheel Drive</td>
+                <td class="py-4 px-4 font-bold text-primary">1,020 HP</td>
+                <td class="py-4 px-4">2.4 Detik</td>
+                <td class="py-4 px-4">620 KM</td>
+                <td class="py-4 px-4">102 kWh (800V)</td>
+                <td class="py-4 px-4 text-right">
+                  <button onclick="selectCarAndOpenInteractive('aura-gt')" class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-[11px] font-bold uppercase tracking-wider hover:bg-primary-container">Pilih</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 font-bold text-on-surface flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+                  <span>Aura Phantom SV</span>
+                </td>
+                <td class="py-4 px-4 text-on-surface-variant">Tri-Motor Performance AWD</td>
+                <td class="py-4 px-4 font-bold text-primary">1,180 HP</td>
+                <td class="py-4 px-4">2.1 Detik</td>
+                <td class="py-4 px-4">540 KM</td>
+                <td class="py-4 px-4">98 kWh (800V)</td>
+                <td class="py-4 px-4 text-right">
+                  <button onclick="selectCarAndOpenInteractive('phantom-sv')" class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-inverse-surface hover:text-inverse-on-surface text-[11px] font-bold uppercase tracking-wider">Pilih</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 font-bold text-on-surface flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                  <span>Aura E-Sprint</span>
+                </td>
+                <td class="py-4 px-4 text-on-surface-variant">Twin-Motor Hyper Roadster</td>
+                <td class="py-4 px-4 font-bold text-primary">890 HP</td>
+                <td class="py-4 px-4">2.6 Detik</td>
+                <td class="py-4 px-4">590 KM</td>
+                <td class="py-4 px-4">92 kWh (800V)</td>
+                <td class="py-4 px-4 text-right">
+                  <button onclick="selectCarAndOpenInteractive('e-sprint')" class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-inverse-surface hover:text-inverse-on-surface text-[11px] font-bold uppercase tracking-wider">Pilih</button>
+                </td>
+              </tr>
+              <tr class="hover:bg-surface-container-low transition-colors">
+                <td class="py-4 px-4 font-bold text-on-surface flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-red-800"></span>
+                  <span>Aura Apex SUV</span>
+                </td>
+                <td class="py-4 px-4 text-on-surface-variant">Dual-Motor All-Terrain Active</td>
+                <td class="py-4 px-4 font-bold text-primary">960 HP</td>
+                <td class="py-4 px-4">2.9 Detik</td>
+                <td class="py-4 px-4">680 KM</td>
+                <td class="py-4 px-4">115 kWh (800V)</td>
+                <td class="py-4 px-4 text-right">
+                  <button onclick="selectCarAndOpenInteractive('apex-suv')" class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-inverse-surface hover:text-inverse-on-surface text-[11px] font-bold uppercase tracking-wider">Pilih</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Mobile Floating Bottom App Bar (Responsive Integration) -->
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl border-t border-surface-container-high/80 px-2 py-2 flex items-center justify-around shadow-2xl">
+    <button id="mob-nav-showcase" onclick="navigateTo('showcase')" class="flex flex-col items-center gap-1 py-1 px-3 rounded-xl text-primary font-bold transition-colors">
+      <span class="material-symbols-outlined text-[22px]">directions_car</span>
+      <span class="text-[10px] tracking-tight">Katalog</span>
+    </button>
+    <button id="mob-nav-interactive" onclick="navigateTo('interactive')" class="flex flex-col items-center gap-1 py-1 px-3 rounded-xl text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">view_in_ar</span>
+      <span class="text-[10px] tracking-tight">Interaktif</span>
+    </button>
+    <button id="mob-nav-specs" onclick="navigateTo('specs')" class="flex flex-col items-center gap-1 py-1 px-3 rounded-xl text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">tune</span>
+      <span class="text-[10px] tracking-tight">Spesifikasi</span>
+    </button>
+    <button onclick="openTestDriveModal()" class="flex flex-col items-center gap-1 py-1 px-3 rounded-xl text-on-surface-variant hover:text-primary transition-colors">
+      <span class="material-symbols-outlined text-[22px]">speed</span>
+      <span class="text-[10px] tracking-tight">Drive</span>
+    </button>
+  </nav>
+
+  <!-- TEST DRIVE MODAL INTERACTION -->
+  <div id="test-drive-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4">
+    <div class="w-full max-w-lg bg-surface-container-lowest border border-surface-container p-6 sm:p-8 rounded-3xl shadow-2xl relative">
+      <button onclick="closeTestDriveModal()" class="absolute top-5 right-5 text-on-surface-variant hover:text-primary p-1">
+        <span class="material-symbols-outlined text-[22px]">close</span>
+      </button>
+
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-[26px]">speed</span>
+        </div>
+        <div>
+          <span class="text-[10px] uppercase font-bold text-primary tracking-widest block">VIP Private Experience</span>
+          <h3 class="text-xl font-extrabold text-on-surface">Jadwalkan Sesi Test Drive</h3>
+        </div>
+      </div>
+
+      <form id="test-drive-form" onsubmit="handleTestDriveSubmit(event)" class="space-y-4">
+        <div>
+          <label class="text-xs font-bold text-on-surface block mb-1.5 uppercase">Model Pilihan</label>
+          <select id="modal-model-select" class="w-full px-4 py-2.5 bg-surface-container-low border border-surface-container text-on-surface rounded-xl text-xs focus:ring-2 focus:ring-primary/20 focus:outline-none">
+            <option value="Aura GT Crimson">Aura GT Crimson (Flagship 1,020 HP)</option>
+            <option value="Aura Phantom SV">Aura Phantom SV (Circuit 1,180 HP)</option>
+            <option value="Aura E-Sprint">Aura E-Sprint (Roadster 890 HP)</option>
+            <option value="Aura Apex SUV">Aura Apex SUV (All-Terrain 960 HP)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-bold text-on-surface block mb-1.5 uppercase">Nama Lengkap</label>
+            <input required type="text" placeholder="e.g. Alexander Pratama" class="w-full px-4 py-2.5 bg-surface-container-low border border-surface-container text-on-surface rounded-xl text-xs focus:ring-2 focus:ring-primary/20 focus:outline-none"/>
+          </div>
+          <div>
+            <label class="text-xs font-bold text-on-surface block mb-1.5 uppercase">Nomor WhatsApp</label>
+            <input required type="tel" placeholder="+62 812-xxxx-xxxx" class="w-full px-4 py-2.5 bg-surface-container-low border border-surface-container text-on-surface rounded-xl text-xs focus:ring-2 focus:ring-primary/20 focus:outline-none"/>
+          </div>
+        </div>
+
+        <div>
+          <label class="text-xs font-bold text-on-surface block mb-1.5 uppercase">Lokasi Sirkuit / Showroom</label>
+          <select class="w-full px-4 py-2.5 bg-surface-container-low border border-surface-container text-on-surface rounded-xl text-xs focus:ring-2 focus:ring-primary/20 focus:outline-none">
+            <option>Aura Motors Flagship Gallery - Sudirman, Jakarta</option>
+            <option>Mandalika International Circuit VIP Lounge</option>
+            <option>Sentul International Dynamic Track</option>
+          </select>
+        </div>
+
+        <div class="pt-4 flex items-center justify-end gap-3">
+          <button type="button" onclick="closeTestDriveModal()" class="px-5 py-2.5 rounded-xl bg-surface-container text-on-surface text-xs font-bold uppercase tracking-wider hover:bg-surface-container-high transition-all">
+            Batal
+          </button>
+          <button type="submit" class="px-6 py-2.5 rounded-xl bg-primary text-on-primary text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-md transition-all flex items-center gap-1.5">
+            <span>Konfirmasi Reservasi</span>
+            <span class="material-symbols-outlined text-[16px]">check</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast-notification" class="fixed top-24 right-6 z-50 glass-card border border-primary/20 p-4 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 translate-x-96 opacity-0 pointer-events-none">
+    <div class="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+      <span class="material-symbols-outlined text-[20px]">check_circle</span>
+    </div>
+    <div>
+      <h5 id="toast-title" class="text-xs font-bold text-on-surface">Notifikasi</h5>
+      <p id="toast-desc" class="text-[11px] text-on-surface-variant">Pesan konfirmasi berhasil diproses.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-surface-container-low/80 border-t border-surface-container py-12 mt-16">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col items-center md:items-start gap-1">
+        <div class="flex items-center gap-3">
+          <img src="assets/02_aura_motors_brand_logo.png" alt="Aura Motors" class="w-6 h-6 object-contain"/>
+          <span class="text-sm font-black uppercase tracking-wider text-on-surface">Aura Motors</span>
+          <span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[9px] uppercase font-bold">RPL Production</span>
+        </div>
+        <p class="text-xs text-on-surface-variant">Dirancang dan direkayasa dengan standar presisi rekayasa perangkat lunak kelas galeri otomotif.</p>
+      </div>
+
+      <div class="flex flex-col items-center md:items-end gap-1">
+        <p class="text-xs text-on-surface-variant">© 2025 Aura Motors. Karya Rekayasa Perangkat Lunak (RPL).</p>
+        <div class="flex items-center gap-4 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
+          <a href="javascript:void(0)" onclick="navigateTo('showcase')" class="hover:text-primary transition-colors">Showcase</a>
+          <a href="javascript:void(0)" onclick="navigateTo('interactive')" class="hover:text-primary transition-colors">Interaktif</a>
+          <a href="javascript:void(0)" onclick="navigateTo('specs')" class="hover:text-primary transition-colors">Spesifikasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic & State Sync Script -->
+  <script>
+    // Car Models Database
+    const carData = {
+      'aura-gt': {
+        name: 'Aura GT Crimson',
+        title: 'Aura GT <span class="text-primary italic">Crimson</span>',
+        desc: 'Eksplorasi mahakarya rekayasa perangkat keras dan komputasi kendaraan listrik modern dengan arsitektur 800-volt bertenaga buas, diselimuti lekukan aerodinamis berseni tinggi.',
+        accel: '2.4 detik',
+        power: '1,020 HP',
+        range: '620 KM',
+        torque: '1,050 Nm',
+        speed: '340 KM/H',
+        price: 'Rp 3.850.000.000',
+        img: 'assets/03_coupe_hero_photography.png',
+        hotspots: true
+      },
+      'phantom-sv': {
+        name: 'Aura Phantom SV',
+        title: 'Aura Phantom <span class="text-primary italic">SV Track</span>',
+        desc: 'Diciptakan murni untuk presisi sirkuit balap ekstrim dengan sasis monokok serat karbon ultra-ringan dan downforce aktif 480 kg.',
+        accel: '2.1 detik',
+        power: '1,180 HP',
+        range: '540 KM',
+        torque: '1,280 Nm',
+        speed: '360 KM/H',
+        price: 'Rp 4.400.000.000',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBCH7A3Mw106NmGJVvSfU8MtiRNyG4HxcDBs8JBEBtwLUzYnp_cj604SG5SBbvADA9xhUlkcZTjelftnFOvE28kk7Adq1E1vSo8JHCr9vpBYFJ96q5-mfCmlI4gdb0ujsmfsvB6ksn2nJ9By07j1MFZB_qaXQAhlQDKAlvEaa79akJSzQn3w84ZUxEKEfQQ2GigjlMuRURTHSs9G8uaU1pCQhxYwNzBCzZTYHOwr5cMcPS6z7ZRHMmV',
+        hotspots: false
+      },
+      'e-sprint': {
+        name: 'Aura E-Sprint',
+        title: 'Aura E-Sprint <span class="text-primary italic">Roadster</span>',
+        desc: 'Sensasi atap terbuka tanpa kompromi performa. Mengadopsi konfigurasi twin-motor AWD berbobot ringan dan handling presisi sirkuit.',
+        accel: '2.6 detik',
+        power: '890 HP',
+        range: '590 KM',
+        torque: '980 Nm',
+        speed: '320 KM/H',
+        price: 'Rp 3.250.000.000',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuABd9_q6ZyLgnsdTTS_fhWBa0qTZTNom4kdxafUSZrDcRWQwIQPdpdyafXlQc2-DSILLPoWShevL0kO1_5JTRDTDcVEtM9qTIe8AaudNWxCQRhjQ1z11rHiiV_dgjbvJmwOFy9OOhKdpbonAoTFjNW29H3oEfp9PzOZoBhFX_t5gCxl1nNLroT8J0aAQ86fCWP-S3lLL4Q4muPdmsmP1Om3Sy1siXElDwVtZWWmWDKD-hLtCF-q5QtY',
+        hotspots: false
+      },
+      'apex-suv': {
+        name: 'Aura Apex SUV',
+        title: 'Aura Apex <span class="text-primary italic">All-Terrain</span>',
+        desc: 'Performa grand-tourer dalam siluet SUV futuristik revolusioner dengan suspensi udara prediktif dual-chamber dan torsi buas instan.',
+        accel: '2.9 detik',
+        power: '960 HP',
+        range: '680 KM',
+        torque: '1,120 Nm',
+        speed: '290 KM/H',
+        price: 'Rp 3.600.000.000',
+        img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDUXq1FBnjvVOquXwlBNwE8lyivDiqpl3qS1tHxL6K3r1MM4F7BtdCIDvyA9iFCayCSZeOnRZ88Nqd8UDc33nk6_qyjJeBlEPKDjQ410pMjhVRGvBwT2DPX3uyGjHPPRmjqk6fOSZ9ueraK2bNp2dMGJi625FtWy7dfT6NW5fpBkfZp-ZSAGf6E3BluiY3z7ePvZ4ptYMXsHVkdeZZ5W61ai41w-gQzTrYvVmXcXGvwIUAHrHzc1rW9',
+        hotspots: false
+      }
+    };
+
+    let currentModelKey = 'aura-gt';
+    let currentActivePanel = 'showcase';
+
+    // Panel Navigation Controller
+    function navigateTo(panelName) {
+      currentActivePanel = panelName;
+      document.querySelectorAll('.view-panel').forEach(p => p.classList.add('hidden'));
+      const activeEl = document.getElementById('panel-' + panelName);
+      if (activeEl) {
+        activeEl.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Sync Desktop Nav Active State
+      const tabs = ['showcase', 'interactive', 'specs'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('nav-btn-' + t);
+        if (btn) {
+          if (t === panelName) {
+            btn.className = "nav-tab px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2";
+          } else {
+            btn.className = "nav-tab px-5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 text-on-surface-variant hover:text-on-surface flex items-center gap-2";
+          }
+        }
+
+        // Sync Mobile Nav
+        const mobBtn = document.getElementById('mob-nav-' + t);
+        if (mobBtn) {
+          if (t === panelName) {
+            mobBtn.classList.remove('text-on-surface-variant');
+            mobBtn.classList.add('text-primary', 'font-bold');
+          } else {
+            mobBtn.classList.remove('text-primary', 'font-bold');
+            mobBtn.classList.add('text-on-surface-variant');
+          }
+        }
+      });
+    }
+
+    // Connect from Catalog Card to Interactive View
+    function selectCarAndOpenInteractive(modelKey) {
+      currentModelKey = modelKey;
+      syncInteractiveDetails(modelKey);
+      navigateTo('interactive');
+    }
+
+    // Switch Model Inside Interactive Panel
+    function switchInteractiveModel(modelKey, btnEl) {
+      currentModelKey = modelKey;
+      document.querySelectorAll('.model-switch-btn').forEach(b => {
+        b.className = "model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-on-surface-variant hover:text-on-surface";
+      });
+      if (btnEl) {
+        btnEl.className = "model-switch-btn px-3 py-1.5 rounded-lg text-xs font-bold transition-all bg-surface-container-lowest text-primary shadow-sm";
+      }
+      syncInteractiveDetails(modelKey);
+    }
+
+    // Synchronize UI with Selected Model Data
+    function syncInteractiveDetails(modelKey) {
+      const data = carData[modelKey];
+      if (!data) return;
+
+      document.getElementById('inter-breadcrumb-name').textContent = data.name;
+      document.getElementById('inter-car-title').innerHTML = data.title;
+      document.getElementById('inter-car-desc').textContent = data.desc;
+      document.getElementById('inter-car-accel').innerHTML = `${data.accel} <span class="text-xs font-normal">detik</span>`;
+      document.getElementById('inter-car-power').innerHTML = `${data.power} <span class="text-xs font-normal">HP</span>`;
+      document.getElementById('stat-range').textContent = data.range;
+      document.getElementById('stat-torque').textContent = data.torque;
+      document.getElementById('stat-speed').textContent = data.speed;
+      
+      const imgEl = document.getElementById('stage-car-img');
+      imgEl.src = data.img;
+      imgEl.style.filter = 'none';
+
+      // Toggle hotspots visibility depending on flagship model
+      const hotspots = document.querySelectorAll('.hotspot-node');
+      hotspots.forEach(h => {
+        h.style.display = data.hotspots ? 'block' : 'none';
+      });
+
+      closeAllHotspots();
+    }
+
+    // Hotspot Click Handling
+    function toggleHotspot(panelId) {
+      const panel = document.getElementById(panelId);
+      if (!panel) return;
+      const isHidden = panel.classList.contains('hidden');
+      closeAllHotspots();
+      if (isHidden) {
+        panel.classList.remove('hidden');
+      }
+    }
+
+    function closeHotspot(panelId) {
+      const panel = document.getElementById(panelId);
+      if (panel) panel.classList.add('hidden');
+    }
+
+    function closeAllHotspots() {
+      document.querySelectorAll('.hotspot-popup').forEach(p => p.classList.add('hidden'));
+    }
+
+    // Stage View Mode (Exterior vs Cockpit)
+    function toggleStageView(viewMode) {
+      const extBtn = document.getElementById('view-mode-ext');
+      const intBtn = document.getElementById('view-mode-int');
+      const carImg = document.getElementById('stage-car-img');
+      closeAllHotspots();
+
+      if (viewMode === 'exterior') {
+        extBtn.className = "px-4 py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface text-xs font-bold uppercase tracking-wider transition-all";
+        intBtn.className = "px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface text-xs font-bold uppercase tracking-wider transition-all";
+        carImg.src = carData[currentModelKey].img;
+        document.querySelectorAll('.hotspot-node').forEach(h => {
+          h.style.display = carData[currentModelKey].hotspots ? 'block' : 'none';
+        });
+      } else {
+        intBtn.className = "px-4 py-1.5 rounded-lg bg-inverse-surface text-inverse-on-surface text-xs font-bold uppercase tracking-wider transition-all";
+        extBtn.className = "px-4 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface text-xs font-bold uppercase tracking-wider transition-all";
+        // Show Cockpit preview image
+        carImg.src = "https://lh3.googleusercontent.com/aida/AEtjO1XX0Kt5EGYSimyGLfcXKjTP2YIEWYh9KE7LBT9oMhxn8Ly09Ag4tiAmtHFmQMMSlaJLtA7MUDY_lQAkG7snErwemm1iIlEvpYR-nBsle3iFMbUh7_fpTsl5b-s-QxrCcfytDwOPCqa-SCW3jbzYtNtZD2h4FGaN4LRPCk2xlGMkV647zdauCGcqJ75RR7XDaqpYe_cMoQugynC-9q_9Aj8ajooaIFiljeIcpbz1fpYOwd2xgUD71lf6h3o";
+        document.querySelectorAll('.hotspot-node').forEach(h => h.style.display = 'none');
+      }
+    }
+
+    // Color Swatch Change
+    function changeCarColor(colorKey, btnEl) {
+      document.querySelectorAll('.color-swatch-btn').forEach(b => {
+        b.classList.remove('ring-4', 'ring-primary-fixed', 'scale-110');
+      });
+      btnEl.classList.add('ring-4', 'ring-primary-fixed', 'scale-110');
+
+      document.getElementById('color-finish-label').textContent = btnEl.getAttribute('data-finish');
+      document.getElementById('color-title-label').textContent = btnEl.getAttribute('data-name');
+
+      const carImg = document.getElementById('stage-car-img');
+      const glow = document.getElementById('stage-ambient-glow');
+
+      if (colorKey === 'polar-white') {
+        carImg.style.filter = 'brightness(1.2) contrast(0.95)';
+        glow.className = "absolute inset-0 m-auto w-4/5 h-3/5 rounded-full bg-slate-300/30 blur-[130px] pointer-events-none transition-all duration-700";
+      } else if (colorKey === 'cyber-grey') {
+        carImg.style.filter = 'grayscale(0.7) brightness(0.85)';
+        glow.className = "absolute inset-0 m-auto w-4/5 h-3/5 rounded-full bg-slate-500/20 blur-[130px] pointer-events-none transition-all duration-700";
+      } else if (colorKey === 'carbon-obsidian') {
+        carImg.style.filter = 'brightness(0.65) contrast(1.3) grayscale(0.5)';
+        glow.className = "absolute inset-0 m-auto w-4/5 h-3/5 rounded-full bg-black/30 blur-[130px] pointer-events-none transition-all duration-700";
+      } else {
+        carImg.style.filter = 'none';
+        glow.className = "absolute inset-0 m-auto w-4/5 h-3/5 rounded-full bg-primary/20 blur-[130px] pointer-events-none transition-all duration-700";
+      }
+    }
+
+    // Drive Mode Handling
+    const driveModeData = {
+      comfort: {
+        title: "Comfort Jelajah",
+        desc: "Peredaman suspensi udara paling lembut, akselerasi linier hemat baterai, sayap aktif tertutup rapat untuk efisiensi jarak tempuh maksimal."
+      },
+      sport: {
+        title: "Sport+ Dynamic",
+        desc: "Responsivitas throttle instan, suspensi adaptif mengeras 35%, dan spoiler aktif terbuka pada sudut 18° untuk stabilitas kecepatan tinggi."
+      },
+      track: {
+        title: "Track Circuit Dynamic",
+        desc: "Torque vectoring roda demi roda presisi sirkuit, kontrol stabilitas ESC semi-nonaktif, spoiler aktif mode rem udara 45°, pendinginan baterai kompresi penuh."
+      }
+    };
+
+    function changeDriveMode(modeKey, btnEl) {
+      document.querySelectorAll('.drive-mode-btn').forEach(b => {
+        b.className = "drive-mode-btn p-3 rounded-2xl bg-surface-container-low text-on-surface hover:bg-surface-container text-left transition-all";
+      });
+      btnEl.className = "drive-mode-btn p-3 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-md text-left transition-all";
+
+      const info = driveModeData[modeKey];
+      if (info) {
+        document.getElementById('mode-title-label').textContent = info.title;
+        document.getElementById('mode-desc-label').textContent = info.desc;
+      }
+    }
+
+    // Catalog Filter Tabs
+    function filterCatalog(category, btnEl) {
+      document.querySelectorAll('.filter-tab').forEach(b => {
+        b.className = "filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all text-on-surface-variant hover:text-on-surface";
+      });
+      btnEl.className = "filter-tab px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all bg-surface-container-lowest text-primary shadow-sm";
+
+      let count = 0;
+      document.querySelectorAll('.car-card').forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.getElementById('active-units-count').textContent = `${count} UNIT`;
+    }
+
+    // Catalog Search Filter
+    function searchCatalog(query) {
+      const q = query.toLowerCase().trim();
+      let count = 0;
+      document.querySelectorAll('.car-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.style.display = 'flex';
+          count++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      document.getElementById('active-units-count').textContent = `${count} UNIT`;
+    }
+
+    // Test Drive Modal Controller
+    function openTestDriveModal(preselectModel) {
+      const modal = document.getElementById('test-drive-modal');
+      const select = document.getElementById('modal-model-select');
+      if (preselectModel) {
+        select.value = preselectModel;
+      } else {
+        select.value = carData[currentModelKey]?.name || 'Aura GT Crimson';
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeTestDriveModal() {
+      document.getElementById('test-drive-modal').classList.add('hidden');
+    }
+
+    function handleTestDriveSubmit(e) {
+      e.preventDefault();
+      closeTestDriveModal();
+      showToast('Jadwal Test Drive Terkonfirmasi', 'Tim concierge Aura Motors akan menghubungi Anda melalui WhatsApp dalam 15 menit.');
+    }
+
+    function downloadSpecsPDF() {
+      showToast('Mengunduh Berkas Spesifikasi', 'Dokumen_Rancang_Bangun_Aura_GT_2025.pdf sedang diunduh.');
+    }
+
+    // Notification Toast System
+    function showToast(title, desc) {
+      const toast = document.getElementById('toast-notification');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-desc').textContent = desc;
+      toast.classList.remove('translate-x-96', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-x-96', 'opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+  </script>
+</body>
+</html>

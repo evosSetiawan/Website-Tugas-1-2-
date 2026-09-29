@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary": "#ffffff", "surface-dim": "#cbdbf5", "surface-container-highest": "#d3e4fe", "surface-bright": "#f8f9ff", "on-primary-fixed-variant": "#93000d", "on-secondary-fixed": "#131b2e", "on-secondary-container": "#5c647a", "on-error": "#ffffff", "secondary-fixed": "#dae2fd", "surface-container-lowest": "#ffffff", "tertiary-fixed": "#ffd9dd", "tertiary-container": "#926a6f", "on-secondary-fixed-variant": "#3f465c", "background": "#f8f9ff", "surface-container-high": "#dce9ff", "on-primary": "#ffffff", "on-background": "#0b1c30", "on-primary-fixed": "#410002", "surface-tint": "#bb171c", "secondary": "#565e74", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#603d42", "secondary-container": "#dae2fd", "on-error-container": "#93000a", "tertiary-fixed-dim": "#ebbabf", "on-surface": "#0b1c30", "secondary-fixed-dim": "#bec6e0", "primary-container": "#db322f", "surface": "#f8f9ff", "inverse-primary": "#ffb4ac", "inverse-on-surface": "#eaf1ff", "surface-container-low": "#eff4ff", "on-tertiary-container": "#fffbff", "tertiary": "#775256", "primary": "#b7131a", "error": "#ba1a1a", "outline-variant": "#e4beb9", "on-tertiary-fixed": "#2f1317", "on-surface-variant": "#5b403d", "surface-container": "#e5eeff", "on-primary-container": "#fffbff", "primary-fixed": "#ffdad6", "outline": "#906f6c", "primary-fixed-dim": "#ffb4ac", "inverse-surface": "#213145", "surface-variant": "#d3e4fe" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "space-xl": "2.5rem", "space-3xl": "6rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-2xl": "4rem", "space-md": "1rem", "margin-desktop": "4rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-lg": "2rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-numeric": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-xl": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-sm": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-hero": ["4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.035em", "fontWeight": "800" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0", "fontWeight": "400" }], "headline-md": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-numeric": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "400" }], "label-caps": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.12em", "fontWeight": "700" }], "label-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "0", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><div class="pointer-events-none fixed inset-0 z-0 overflow-hidden"><div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[540px] h-[540px] rounded-full bg-primary/5 blur-[120px]"></div><div class="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-primary-container/5 blur-[100px]"></div></div><header class="fixed top-0 inset-x-0 z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><button class="w-11 h-11 flex items-center justify-center text-on-surface rounded-lg hover:bg-surface-container-high/50 transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-2"><img alt="A sleek, luxury automotive emblem logo for 'AURA MOTORS', modern minimalist geometric winged shield monogram with subtle ruby red and carbon metallic styling, vector aesthetic on transparent background.. Design context: - Primary color: #e53935
+- Font: plusJakartaSans
+- Mode: light
+- Roundness: rounded-sm
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WiCn4eNTjwV6GtDDCn6557CwPHMirboPP5VoKKSeFqYjY_8n0SlngUMq1XOXr1wSQBVhQHaI3v1k_yI3IUc8c97k2ED1U4yvM-IcI6pXwKUWBHCi8ojrPHEHnjbRv7FppG7uEDVx930_H5ldZ0cOzXNBpOZudfKKYVDjFhYSXzUoUiSHT7usE7zAQt97YA67yAz5yek3su6PKixc3VxVkkvgfc6PnPGDLzusa59WfXm1jVut2aWYvv-Zk"/><div class="flex flex-col"><span class="font-label-caps text-label-caps text-primary tracking-widest leading-none">AURA</span><span class="font-headline-sm text-label-md font-bold tracking-tight text-on-surface uppercase leading-tight">MOTORS</span></div></div></div><div class="flex items-center gap-space-xs"><a class="h-9 px-3 flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-[0_2px_10px_rgba(183,19,26,0.08)] hover:bg-primary hover:text-on-primary transition-all duration-200" data-path="profil-test-drive" href="#"><span class="material-symbols-outlined text-[18px]">speed</span><span class="font-label-caps text-label-caps hidden sm:inline-block">TEST DRIVE</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface z-10 min-h-screen"><div class="flex flex-col w-full relative">
+<!-- Ambient Atmospheric Crimson Glow Layers -->
+<div class="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 w-80 h-80 rounded-full bg-primary/10 blur-[90px] -z-10"></div>
+<div class="pointer-events-none absolute top-[480px] -left-20 w-72 h-72 rounded-full bg-primary-container/10 blur-[80px] -z-10"></div>
+<!-- Header Micro Stage -->
+<div class="px-space-md pt-space-md flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-primary/10">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">LINI EKSKLUSIF 2025 // REKAYASA RPL</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-0.5">
+      Definisi Kemewahan <span class="text-primary font-bold">&amp; Kecepatan</span>
+</h1>
+<p class="font-body-sm text-body-sm text-secondary">
+      Presisi rekayasa aerodinamika generasi mutakhir berpadu arsitektur kelistrikan cerdas ultra-responsif.
+    </p>
+</div>
+<!-- Flagship Spotlight Stage -->
+<div class="px-space-md mt-space-md">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-xl p-space-md">
+<!-- Glow Underneath Car Silhouette -->
+<div class="pointer-events-none absolute top-12 left-1/2 -translate-x-1/2 w-64 h-36 rounded-full bg-primary/15 blur-2xl"></div>
+<!-- Flagship Header Chip -->
+<div class="flex items-center justify-between mb-space-sm relative z-10">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase block">Flagship Series</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Aura GT Crimson</span>
+</div>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-secondary-container font-label-caps text-[10px] uppercase">
+          E-Hypercar
+        </span>
+</div>
+<!-- Vehicle Visual Focal Frame -->
+<div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-low flex items-center justify-center my-space-xs">
+<img alt="Aura GT Crimson Luxury Electric Hypercar" class="w-full h-full object-cover scale-105 transition-transform duration-500 hover:scale-110" src="https://lh3.googleusercontent.com/aida/AEtjO1XX0Kt5EGYSimyGLfcXKjTP2YIEWYh9KE7LBT9oMhxn8Ly09Ag4tiAmtHFmQMMSlaJLtA7MUDY_lQAkG7snErwemm1iIlEvpYR-nBsle3iFMbUh7_fpTsl5b-s-QxrCcfytDwOPCqa-SCW3jbzYtNtZD2h4FGaN4LRPCk2xlGMkV647zdauCGcqJ75RR7XDaqpYe_cMoQugynC-9q_9Aj8ajooaIFiljeIcpbz1fpYOwd2xgUD71lf6h3o"/>
+<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-on-surface/80 backdrop-blur-md text-surface-container-lowest font-label-caps text-[9px] tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> LIVE VIEW
+        </div>
+</div>
+<!-- Telemetry Tri-Metric Node -->
+<div class="grid grid-cols-3 gap-2 py-space-sm my-space-xs">
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-numeric text-[1.25rem] leading-none text-primary font-bold">2.4s</span>
+<span class="font-label-caps text-[9px] text-secondary mt-1">0-100 KM/J</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-numeric text-[1.25rem] leading-none text-on-surface font-bold">340</span>
+<span class="font-label-caps text-[9px] text-secondary mt-1">TOP SPEED (KM/J)</span>
+</div>
+<div class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-center">
+<span class="font-label-numeric text-[1.25rem] leading-none text-primary font-bold">100%</span>
+<span class="font-label-caps text-[9px] text-secondary mt-1">ALL-ELECTRIC</span>
+</div>
+</div>
+<!-- Price & Deep Action -->
+<div class="flex items-center justify-between pt-space-xs relative z-10">
+<div>
+<span class="font-label-caps text-[10px] text-secondary block">ESTIMASI OTR</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Rp 3,85 M</span>
+</div>
+<a class="h-10 px-4 rounded-md bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-md shadow-primary/20 hover:bg-primary-container transition-all active:scale-95" data-path="detail-interaktif" href="#">
+<span>Eksplorasi Detail</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Search & Category Filters -->
+<div class="px-space-md mt-space-lg flex flex-col gap-space-sm">
+<!-- Compact Dynamic Search -->
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-secondary/70 font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="katalog-search" placeholder="Cari varian, daya kuda, atau arsitektur chassis..." type="text"/>
+</div>
+<!-- Filter Category Chips (Horizontal Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="category-filter-bar">
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-caps text-[11px] whitespace-nowrap shadow-sm transition-all" data-category="all">
+        Semua Koleksi (4)
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-caps text-[11px] whitespace-nowrap hover:text-on-surface transition-all" data-category="electric-gt">
+        Electric GT
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-caps text-[11px] whitespace-nowrap hover:text-on-surface transition-all" data-category="hypercar">
+        Hypercar SV
+      </button>
+<button class="filter-tab px-3.5 py-1.5 rounded-full bg-surface-container-low text-secondary font-label-caps text-[11px] whitespace-nowrap hover:text-on-surface transition-all" data-category="suv">
+        Luxury SUV
+      </button>
+</div>
+</div>
+<!-- Vehicle Card Stack -->
+<div class="px-space-md mt-space-md flex flex-col gap-space-md" id="vehicle-card-list">
+<!-- Card 1: Aura GT Crimson (Flagship Model) -->
+<article class="car-item rounded-xl bg-surface-container-lowest p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden" data-category="electric-gt">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-wider uppercase">Grand Tourer Pure</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Aura GT Crimson</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-caps text-[10px] font-bold">
+          BESTSELLER
+        </span>
+</div>
+<div class="w-full h-44 rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Studio hero 3/4 perspective shot of a sleek modern ruby-red Aura GT electric grand tourer sports car parked in an architectural showroom with polished white marble floor, soft ruby ambient backlighting, aerodynamic carbon fiber diffusers, and futuristic flush door handles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8we2L6SmtqVNYIW3U6gYnX592UW6XFNxkEZ8YADwzjlpisC_54xtYJfWBOMYCnSR4aAWBT5BsvNAwr3U3Jw5Q3f3rFrvQAbz-amMlUGiu_ia351v7z7qxFoC7_jWUfRl0zpRtdcP27KA6Sp7_vdei6R7Gsuj1aWs75s0pzMQAUOh_BidlR5VafUMee5VSwpm7OZwpeS-_Yyi1FV65-GGCIVQCkOg12cl5__v7S-SQhmidI-iut-j2"/>
+<div class="absolute bottom-2 left-2 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">920 HP</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">AWD DUAL</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-body-sm text-body-sm pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span>Akselerasi 2.4s</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">battery_charging_full</span>
+<span>620 Km Jarak</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div>
+<span class="font-label-caps text-[9px] text-secondary">HARGA ESTIMASI</span>
+<p class="font-label-md text-label-md text-on-surface font-bold">Rp 3.850.000.000</p>
+</div>
+<a class="px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-caps text-[11px] font-bold flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" data-path="detail-interaktif" href="#">
+<span>Buka Interaktif</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Aura Phantom SV (Track Edition) -->
+<article class="car-item rounded-xl bg-surface-container-lowest p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden" data-category="hypercar">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">Track Specification</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Aura Phantom SV</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-caps text-[10px]">
+          LIMITED RUN
+        </span>
+</div>
+<div class="w-full h-44 rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Matte onyx black high performance electric hypercar Aura Phantom SV with exposed carbon-fiber aerodynamic wings and active red air brake fins in a pristine minimalist wind-tunnel testing chamber under crisp studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk8ZGEnNhSnYPWGy2X3y9OYEzTaOftX0lDXPWIoDd0bzbNZMZ31zFzUqDewGbhIq7hTHJISsoZjsotUd5X0g_ts5NLMyaEU-1EXNF87Ux5sMhLZ9eRMvig4F4GPm8TFrJnAFezH5DTmPYIJRMUIGlukHhE8LXog0D7jFBlstCTKVln3-_RXVXC_c52QoxV2EM01iMnTTgv3REn8KR8ZprytaVjvTe27xhzLqa_M8JpfUN_YzoYqJjS"/>
+<div class="absolute bottom-2 left-2 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">1.180 HP</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">TRIPLE MOTOR</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-body-sm text-body-sm pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<span>Top Speed 365 km/j</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">timer</span>
+<span>0-100 km/j: 1.9s</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div>
+<span class="font-label-caps text-[9px] text-secondary">HARGA ESTIMASI</span>
+<p class="font-label-md text-label-md text-on-surface font-bold">Rp 4.400.000.000</p>
+</div>
+<a class="px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-caps text-[11px] font-bold flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" data-path="detail-interaktif" href="#">
+<span>Buka Interaktif</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 3: Aura E-Sprint Roadster -->
+<article class="car-item rounded-xl bg-surface-container-lowest p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden" data-category="hypercar">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">Open-Top Hyper Roadster</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Aura E-Sprint</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-caps text-[10px]">
+          NEW RELEASE
+        </span>
+</div>
+<div class="w-full h-44 rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Open-top titanium silver electric roadster sports vehicle Aura E-Sprint with red leather cockpit interior, sculpted side aerodynamic air channels, driving smoothly on a pristine seaside coastal highway during golden hour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBikpx5UNP6Nton-rdUyx27Jlt0qVId1fvCsD7ByYAU0L1oOZTCM6v0g7JxBJiX77r2-Z5np2a7ntNa_jQn7Y1JCYsupntOuZLE1z3OeDBnpNuU4qKn5Mz7tLoFkXNYvqQlj4vaSwDp5geUBJNXzEI-PFPfg7XtO2VPsSmHgcTj89U4U5fO9aZjgvcihQrLUyArkLyio3SUVqhyqsPajOBjugoxFGAicWcFKSVhayQNBxIXDspJuekt"/>
+<div class="absolute bottom-2 left-2 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">890 HP</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">RWD SPORT</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-body-sm text-body-sm pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">air</span>
+<span>Aero Cockpit GT</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">battery_5_bar</span>
+<span>550 Km Jarak</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div>
+<span class="font-label-caps text-[9px] text-secondary">HARGA ESTIMASI</span>
+<p class="font-label-md text-label-md text-on-surface font-bold">Rp 3.250.000.000</p>
+</div>
+<a class="px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-caps text-[11px] font-bold flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" data-path="detail-interaktif" href="#">
+<span>Buka Interaktif</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Card 4: Aura Apex SUV -->
+<article class="car-item rounded-xl bg-surface-container-lowest p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden" data-category="suv">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-wider uppercase">All-Terrain Luxury</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Aura Apex SUV</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-caps text-[10px]">
+          FAMILY PERFORMANCE
+        </span>
+</div>
+<div class="w-full h-44 rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Luxury full-size pearl-white performance SUV Aura Apex with aerodynamic roofline, flushed crimson tail-light array, and large dark alloy wheels, photographed in front of a modern minimalist concrete villa." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKA2nEUxHfUL-4Y_mdL7vy52qwXLVq7sPv8v-vVRCxJK-YjSCmcYdMO8GUt8SXsxxR6vXUrhorgSWtEq7a0I7vAnqOl18KJdrIhGxB0e7OYjruBmkOkT5Alf0ka660qv_d06BqNbB87qvefOelOnEcBf4Dg40xileusX3e7nL5aGHljAVbV3YBEVQAde4dr0Jr75FYCDno_dd_vIxlpbj6iUSMnYbaONUImyuwx7OKGMqMBKt_njBf"/>
+<div class="absolute bottom-2 left-2 flex gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">780 HP</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-label-caps text-[9px]">ACTIVE AIR AWD</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-secondary font-body-sm text-body-sm pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">airline_seat_recline_extra</span>
+<span>5 Seater Executive</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">terrain</span>
+<span>Terrain Mode RPL</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1">
+<div>
+<span class="font-label-caps text-[9px] text-secondary">HARGA ESTIMASI</span>
+<p class="font-label-md text-label-md text-on-surface font-bold">Rp 3.490.000.000</p>
+</div>
+<a class="px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-caps text-[11px] font-bold flex items-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" data-path="detail-interaktif" href="#">
+<span>Buka Interaktif</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Telemetry & Fast-Charge Highlight Bento -->
+<div class="px-space-md mt-space-lg mb-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase">Arsitektur Teruji RPL</span>
+<h3 class="font-headline-sm text-label-md font-bold text-on-surface">Efisiensi &amp; Rekayasa</h3>
+</div>
+</div>
+<span class="font-label-caps text-[9px] px-2 py-0.5 rounded bg-surface-container text-secondary">ISO 9001-EV</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<!-- Metric 1: Aero Cd -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-caps text-[10px]">AERODINAMIKA</span>
+<span class="material-symbols-outlined text-[16px] text-primary">air</span>
+</div>
+<span class="font-label-numeric text-[1.5rem] leading-none text-on-surface font-bold">0.198 <span class="text-xs font-normal text-secondary">Cd</span></span>
+<span class="font-body-sm text-[11px] text-secondary">Koefisien hambatan terendah di kelasnya</span>
+</div>
+<!-- Metric 2: Fast Charge 800V -->
+<div class="p-3 rounded-lg bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-caps text-[10px]">FAST CHARGE 800V</span>
+<span class="material-symbols-outlined text-[16px] text-primary">electric_bolt</span>
+</div>
+<span class="font-label-numeric text-[1.5rem] leading-none text-primary font-bold">12 <span class="text-xs font-normal text-secondary">Menit</span></span>
+<span class="font-body-sm text-[11px] text-secondary">Pengisian daya 10% hingga 80% SoC</span>
+</div>
+</div>
+<!-- Quick Test Drive Hook Mini Banner -->
+<div class="mt-space-xs pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Jadwalkan uji performa privat Anda</span>
+</div>
+<a class="text-primary font-label-md text-label-md flex items-center gap-0.5" data-path="profil-test-drive" href="#">
+<span>Daftar</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const searchInput = document.getElementById('katalog-search');
+    const filterButtons = document.querySelectorAll('.filter-tab');
+    const carCards = document.querySelectorAll('.car-item');
+
+    let currentCategory = 'all';
+
+    function applyFilterAndSearch() {
+      const term = (searchInput?.value || '').toLowerCase().trim();
+
+      carCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const textContent = card.innerText.toLowerCase();
+
+        const matchesCat = (currentCategory === 'all') || (cat === currentCategory);
+        const matchesSearch = !term || textContent.includes(term);
+
+        if (matchesCat && matchesSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          b.classList.add('bg-surface-container-low', 'text-secondary');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-secondary');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+        currentCategory = btn.getAttribute('data-category') || 'all';
+        applyFilterAndSearch();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilterAndSearch);
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(11,28,48,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-12 transition-colors gap-0.5 text-primary font-semibold" data-path="showcase-katalog" href="#"><span class="material-symbols-outlined text-[22px]">directions_car</span><span class="font-label-caps text-[10px] tracking-tight">Showcase</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="detail-interaktif" href="#"><span class="material-symbols-outlined text-[22px]">view_in_ar</span><span class="font-label-caps text-[10px] tracking-tight">Interaktif</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="inovasi-rpl" href="#"><span class="material-symbols-outlined text-[22px]">memory</span><span class="font-label-caps text-[10px] tracking-tight">Inovasi RPL</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 text-secondary hover:text-on-surface transition-colors gap-0.5" data-path="profil-test-drive" href="#"><span class="material-symbols-outlined text-[22px]">badge</span><span class="font-label-caps text-[10px] tracking-tight">Profil / Drive</span></a></div></nav></body></html>
